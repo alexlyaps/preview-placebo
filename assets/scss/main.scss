@@ -47,7 +47,7 @@ h1 {
 h1,
 h2 {
   font-weight: 300;
-  font-size: 50px;
+  font-size: 2.813rem;
   text-align: center;
   background: linear-gradient(38deg, #ffffff, #dac0a5);
   -webkit-text-fill-color: transparent;
@@ -62,9 +62,9 @@ h2 {
   background-clip: text;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 28.125rem) {
   h1 {
-    font-size: 45px;
+    font-size: 2.531rem;
   }
 }
 
@@ -72,10 +72,10 @@ h3 {
   display: block;
   text-align: center;
   color: $light-gray;
-  font-size: 14px;
+  font-size: 0.788rem;
   font-weight: regular;
   letter-spacing: 0.2;
-  line-height: 21px;
+  line-height: 1.181rem;
 }
 
 * {
@@ -85,18 +85,18 @@ h3 {
 
 .subtitle-global {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.013rem;
   font-weight: 500;
-  line-height: 25px;
-  margin-top: 26px;
-  margin-bottom: 54px;
+  line-height: 1.406rem;
+  margin-top: 1.463rem;
+  margin-bottom: 3.038rem;
   opacity: 0.54;
   letter-spacing: 0.4px;
 
   .subtitle-global {
-    margin: 16px 27px 35px 27px;
-    font-size: 16px;
-    line-height: 20px;
+    margin: 0.9rem 1.519rem 1.969rem 1.519rem;
+    font-size: 0.9rem;
+    line-height: 1.125rem;
   }
 }
 

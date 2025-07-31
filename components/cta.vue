@@ -11,7 +11,7 @@
       <div class="image-wrapper__inner">
         <img
           src="/images/cta-phone@2x.png"
-          sizes="(max-width: 500px) 100vw, 392px"
+          sizes="(max-width: 500px) 100vw, 353px"
           alt="App UI example"
           width="392"
           height="809"
@@ -43,7 +43,7 @@
         />
       </div>
     </div>
-    <div class="subtitle-global" style="margin-bottom: 50px; opacity: 1">
+    <div class="subtitle-global" style="margin-bottom: 45px; opacity: 1">
       Мы тщательно отбираем, проверяем и обучаем <br />
       наставников. Каждый готов помочь разобраться в себе, <br />
       своих возможностях и гармонии с миром.
@@ -64,8 +64,8 @@
 }
 
 .cta__heading {
-  margin-top: 309px;
-  max-width: 570px;
+  margin-top: 278px;
+  max-width: 513px;
   width: 100%;
 }
 
@@ -73,8 +73,8 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 60px;
-  margin-bottom: 75px;
+  margin-top: 54px;
+  margin-bottom: 68px;
 }
 
 .image-wrapper__inner {

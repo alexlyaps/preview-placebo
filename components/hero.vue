@@ -45,7 +45,7 @@
           height="809"
         />
       </div>
-      <div class="subtitle-global" style="margin-top: 80px; opacity: 1">
+      <div class="subtitle-global" style="margin-top: 72px; opacity: 1">
         Alma — мобильный сервис, который поможет <br />
         научиться понимать себя глубже через <br />изучение личных чисел,
         космических циклов<br />
@@ -99,7 +99,7 @@ onMounted(() => {
 <style scoped lang="scss">
 .motion-container {
   width: 100%;
-  max-width: 575px;
+  max-width: 518px;
   visibility: hidden;
 }
 
@@ -113,7 +113,7 @@ onMounted(() => {
 
   .bg-gradient {
     position: absolute;
-    height: 1774px;
+    height: 1597px;
     width: 100vw;
     z-index: -1;
     left: 0;
@@ -124,11 +124,11 @@ onMounted(() => {
 
 .hero__logo {
   position: absolute;
-  top: 26px;
+  top: 23px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 40px;
+  width: 45px;
+  height: 36px;
 }
 
 .hero {
@@ -136,10 +136,10 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  width: 640px;
+  width: 576px;
 
   h1 {
-    margin-top: 337px;
+    margin-top: 303px;
   }
 
   .btn__content {
@@ -149,20 +149,20 @@ onMounted(() => {
 }
 
 .hero__image {
-  margin-top: 330px;
+  margin-top: 297px;
 }
 
 .hero__access {
   color: rgba(95, 95, 95, 1);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0.31px;
+  letter-spacing: 0.28px;
   text-align: center;
-  line-height: 26px;
-  margin-top: 20px;
+  line-height: 23px;
+  margin-top: 18px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 450px) {
   h1 br {
     display: none;
   }
@@ -184,11 +184,11 @@ onMounted(() => {
   }
 
   .hero {
-    margin-bottom: 70px;
+    margin-bottom: 63px;
   }
 
   .hero__image {
-    margin-top: 120px;
+    margin-top: 108px;
     width: 72.5vw;
     aspect-ratio: 0.5;
 
@@ -208,17 +208,17 @@ onMounted(() => {
 
   .hero {
     width: 100%;
-    padding: 0 8px;
+    padding: 0 7px;
     box-sizing: border-box;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 
     h1 {
-      font-size: 40px;
-      margin: 183px 10px 0 10px;
+      font-size: 36px;
+      margin: 165px 9px 0 9px;
     }
     .btn__content {
-      font-size: 15px;
-      padding: 10px 0;
+      font-size: 14px;
+      padding: 9px 0;
     }
   }
 
@@ -240,7 +240,7 @@ onMounted(() => {
 .circle-bg {
   position: absolute;
   width: 90vw;
-  height: 440px;
+  height: 396px;
   border-radius: 50%;
   opacity: 0.57;
 
@@ -267,13 +267,13 @@ onMounted(() => {
 
 .circle-bg--right {
   left: 22vw;
-  top: 345px;
+  top: 311px;
   transform: rotate(165deg);
 }
 
 .circle-bg--left {
   left: -27vw;
-  top: 474px;
+  top: 427px;
   transform: rotate(195deg);
 }
 

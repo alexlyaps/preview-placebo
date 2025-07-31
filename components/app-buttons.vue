@@ -41,16 +41,16 @@
 <style scoped lang="scss">
 .appbuttons-wrapper {
   position: fixed;
-  bottom: 35px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: row;
-  gap: 7px;
+  gap: 6px;
   z-index: 100;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 450px) {
   .appbuttons-wrapper {
     display: none;
   }

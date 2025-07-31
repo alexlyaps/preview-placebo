@@ -11,7 +11,7 @@
       label="Контакт для обратной связи"
       placeholder="Номер телефона или мессенджера"
     />
-    <BaseButton variant="big" style="margin-top: 15px"
+    <BaseButton variant="big" style="margin-top: 14px"
       >Отправить заявку</BaseButton
     >
   </div>
@@ -26,32 +26,32 @@ const { isOpened, setIsOpened } = useApplicationForm();
 <style lang="scss" scoped>
 .wrapper {
   position: fixed;
-  top: calc(50vh - 328px);
+  top: calc(50vh - 295px);
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 27px;
-  max-width: 504px;
-  border-radius: 33px;
+  gap: 24px;
+  max-width: 454px;
+  border-radius: 30px;
   background-color: rgba(33, 32, 36, 0.6);
   border: 1px solid rgba($color: #fff, $alpha: 0.07);
-  padding: 42px;
+  padding: 38px;
   justify-content: start;
   align-items: stretch;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(45px);
 }
 
 .cross {
   position: absolute;
-  right: 24px;
-  top: 21px;
-  width: 16px;
-  height: 16px;
+  right: 22px;
+  top: 19px;
+  width: 14px;
+  height: 14px;
   color: rgba(255, 255, 255, 0.21);
   font-family: Manrope-Light;
-  font-size: 33px;
+  font-size: 30px;
   font-weight: 300;
   font-style: extralight;
   cursor: pointer;
@@ -63,7 +63,7 @@ const { isOpened, setIsOpened } = useApplicationForm();
 
 @media (max-width: 500px) {
   .wrapper {
-    padding: 11vh 20px;
+    padding: 11vh 18px;
     width: 100%;
     height: 100%;
     left: 0;

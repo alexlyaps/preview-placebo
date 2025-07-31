@@ -17,10 +17,10 @@ const variantClass = `btn--${props.variant || "small"}`;
 // базовый стиль
 .btn {
   padding: 0 1rem;
-  border-radius: 10px;
+  border-radius: 9px;
   font-weight: 600;
   transition: 0.2s all ease-in-out, 0.02s border ease-in-out;
-  height: 36px;
+  height: 32px;
   border: none;
   cursor: pointer;
 }
@@ -29,11 +29,11 @@ const variantClass = `btn--${props.variant || "small"}`;
 .btn--big {
   background-color: #ffffff;
   color: #000000;
-  height: 64px;
-  padding: 20px 63px;
+  height: 58px;
+  padding: 18px 57px;
   border: 1px solid #000;
-  border-radius: 17px;
-  font-size: 18px;
+  border-radius: 15px;
+  font-size: 16px;
 
   &:hover {
     background-color: $light-gray;
@@ -45,13 +45,13 @@ const variantClass = `btn--${props.variant || "small"}`;
 }
 
 .btn--store {
-  height: 40px;
-  border-radius: 10px;
+  height: 36px;
+  border-radius: 9px;
   background-color: rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
-  gap: 7px;
-  font-size: 15px;
+  gap: 6px;
+  font-size: 14px;
   font-weight: 500;
   color: #fff;
 
@@ -62,19 +62,19 @@ const variantClass = `btn--${props.variant || "small"}`;
 }
 
 .btn--mobile-store {
-  height: 40px;
-  border-radius: 10px;
+  height: 36px;
+  border-radius: 9px;
   background-color: rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
-  gap: 15px;
-  font-size: 17px;
+  gap: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #fff;
-  width: 180px;
-  height: 57px;
+  width: 162px;
+  height: 51px;
   background-color: rgba(60, 60, 60, 0.49);
-  backdrop-filter: blur(11px);
+  backdrop-filter: blur(10px);
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.45);
@@ -85,11 +85,11 @@ const variantClass = `btn--${props.variant || "small"}`;
 .btn--small {
   background-color: #ffffff;
   color: #000000;
-  height: 40px;
-  padding: 7px 20px;
+  height: 36px;
+  padding: 6px 18px;
   border: 1px solid #000;
-  border-radius: 12px;
-  font-size: 16px;
+  border-radius: 11px;
+  font-size: 14px;
   font-weight: 600;
 
   &:hover {
@@ -102,15 +102,15 @@ const variantClass = `btn--${props.variant || "small"}`;
 }
 
 .btn--rounded {
-  height: 40px;
-  border-radius: 20px;
+  height: 36px;
+  border-radius: 18px;
   background-color: rgba(255, 255, 255, 0.06);
   display: flex;
   align-items: center;
-  padding: 0 11px;
-  gap: 7px;
-  font-size: 14px;
-  letter-spacing: 0.14px;
+  padding: 0 10px;
+  gap: 6px;
+  font-size: 13px;
+  letter-spacing: 0.13px;
   font-weight: 600;
   color: #fff;
 
@@ -123,7 +123,7 @@ const variantClass = `btn--${props.variant || "small"}`;
   color: #fff;
   border: none;
   background-color: transparent;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   padding: 0;
   transition: all 0.3s ease-in-out;

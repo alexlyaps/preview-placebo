@@ -10,8 +10,8 @@
     <div class="image-wrapper">
       <div class="image-wrapper__inner">
         <img
-          src="/images/mobile-cta.png"
-          sizes="(max-width: 500px) 100vw, 392px"
+          src="/images/cta-phone@2x.png"
+          sizes="(max-width: 500px) 100vw, 353px"
           alt="App UI example"
           width="336"
           height="674"
@@ -52,7 +52,7 @@
     </div>
     <div
       class="subtitle-global"
-      style="margin-bottom: 50px; opacity: 1; width: 90vw"
+      style="margin-bottom: 45px; opacity: 1; width: 90vw"
     >
       Каждый готов помочь разобраться в себе, своих возможностях и гармонии с
       миром.
@@ -67,7 +67,7 @@
 @use "assets/scss/main.scss" as *;
 
 .cta {
-  padding: 0 8px;
+  padding: 0 7px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,17 +78,17 @@ br {
 }
 
 h2.cta__heading {
-  margin: 100px 30px 0 30px !important;
-  font-size: 40px;
+  margin: 90px 27px 0 27px !important;
+  font-size: 36px;
 }
 .image-wrapper {
   display: flex;
   justify-content: center;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 .image-wrapper__inner {
-  left: -13px;
+  left: -12px;
   width: 90vw;
   display: flex;
   justify-content: center;
@@ -103,7 +103,7 @@ h2.cta__heading {
   background: linear-gradient(to top, rgba(#000, 1), rgba(#000, 0));
 }
 
-@media (min-width: 500px) {
+@media (min-width: 450px) {
   .cta {
     display: none;
   }

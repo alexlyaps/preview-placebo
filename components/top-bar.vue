@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="right">
-      <SocialIcons style="gap: 16px" />
+      <SocialIcons style="gap: 14px" />
       <div class="right__app">
         <BaseButton variant="rounded">
           <svg
@@ -59,19 +59,19 @@ import logoStar from "~/assets/images/alma-star.png";
 <style lang="scss">
 .topbar-wrapper {
   position: fixed;
-  top: 20px;
+  top: 18px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  max-width: 777px;
-  height: 58px;
-  border-radius: 29px;
+  max-width: 720px;
+  height: 52px;
+  border-radius: 26px;
   background-color: rgba(#414141, 0.31);
-  backdrop-filter: blur(50px);
-  padding: 0 9px 0 20px;
+  backdrop-filter: blur(45px);
+  padding: 0 8px 0 18px;
   align-items: center;
   z-index: 100;
 }
@@ -79,24 +79,24 @@ import logoStar from "~/assets/images/alma-star.png";
 .left__logos {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
 }
 
 .right,
 .left {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 20px;
 }
 
 .left {
-  gap: 26px;
+  gap: 23px;
 }
 
 .left__buttons {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
 }
 
 .right__app {

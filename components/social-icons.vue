@@ -13,7 +13,7 @@
 <style scoped lang="scss">
 .socials__buttons {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   align-items: center;
 }
 </style>

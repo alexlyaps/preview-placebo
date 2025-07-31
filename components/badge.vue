@@ -20,30 +20,30 @@ defineProps<{
 // базовый стиль
 .badge {
   position: absolute;
-  height: 78px;
+  height: 70px;
   display: flex;
-  gap: 29px;
+  gap: 26px;
   align-items: center;
-  padding: 0 20px;
-  border-radius: 39px;
+  padding: 0 18px;
+  border-radius: 35px;
   background-color: rgba(47, 47, 47, 0.55);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(9px);
 }
 
 .text {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 @media (max-width: 500px) {
   .badge {
-    height: 58px;
-    padding: 0 10px;
-    gap: 21px;
+    height: 52px;
+    padding: 0 9px;
+    gap: 19px;
   }
 
   .img-wrapper {
-    height: 33px;
-    width: 49px;
+    height: 30px;
+    width: 44px;
 
     & img {
       width: 100% !important;
@@ -52,7 +52,7 @@ defineProps<{
   }
 
   .text {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 </style>
