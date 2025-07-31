@@ -53,6 +53,13 @@ h2 {
   background-clip: text;
 }
 
+h2 {
+  background: linear-gradient(38deg, #ffffff, #daa9a5);
+  -webkit-text-fill-color: transparent;
+  -webkit-backdrop-clip: text;
+  background-clip: text;
+}
+
 @media (max-width: 500px) {
   h1 {
     font-size: 45px;

@@ -30,7 +30,7 @@ const variantClass = `btn--${props.variant || "small"}`;
   background-color: #ffffff;
   color: #000000;
   height: 64px;
-  padding: 20px 35px;
+  padding: 20px 63px;
   border: 1px solid #000;
   border-radius: 17px;
   font-size: 18px;

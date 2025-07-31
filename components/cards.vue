@@ -4,7 +4,7 @@
       Направляй свой день <br />
       вместе с Alma
     </h2>
-    <div class="subtitle-global">
+    <div class="subtitle-global" style="letter-spacing: 0.4px">
       Приложение альма дает персонализированные советы каждый день
     </div>
     <section
@@ -14,15 +14,17 @@
       <div class="cards__block">
         <Card :height="635" url="/images/card-1@2x.png">
           <div class="card__text">
-            Личные рекомендации каждый день подсказывают лучшее время для
-            действий, отдыха и фокуса.
+            Личные рекомендации каждый <br />
+            день подсказывают лучшее <br />
+            время для действий, отдыха и <br />фокуса.
           </div>
         </Card>
         <Card :height="564" url="/images/card-2@1x.png">
           <div class="card__text-wrapper">
             <div class="card__text">
-              Практики, медитации и курсы помогают восстановить энергию, ясность
-              и внутренний ритм.
+              Практики, медитации и курсы помогают<br />
+              восстановить энергию, ясность и<br />
+              внутренний ритм.
             </div>
           </div>
         </Card>
@@ -30,20 +32,22 @@
       <div class="cards__block">
         <Card :height="266" url="/images/card-3@1x.png">
           <div class="card__text">
-            Обученный AI-ассистент отвечает на вопросы, даёт подсказки и мягко
-            направляет в нужный момент.
+            Обученный AI-ассистент <br />отвечает на вопросы, даёт
+            <br />подсказки и мягко направляет в <br />нужный момент.
           </div>
         </Card>
         <Card :height="624" url="/images/card-4@2x.png">
           <div class="card__text">
-            Полная персональная карта личности на основе 10 систем самопознания
+            Полная персональная карта <br />личности на основе 10 систем<br />
+            самопознания
           </div>
         </Card>
         <Card :height="290" url="/images/card-5@1x.png">
           <div class="card__text-wrapper">
             <div class="card__text">
-              Эксперты всегда рядом, чтобы ты мог получить живую поддержку
-              тогда, когда она действительно нужна.
+              Эксперты всегда рядом, чтобы ты мог<br />
+              получить живую поддержку тогда,<br />
+              когда она действительно нужна.
             </div>
           </div>
         </Card>
@@ -70,7 +74,7 @@
   display: flex;
   flex-direction: row;
   gap: 24px;
-  margin-top: 115px;
+  margin-top: 60px;
 }
 
 h2 {
@@ -99,6 +103,8 @@ h2 {
   font-size: 20px;
   font-weight: 400;
   width: 440px;
+  line-height: 27px;
+  letter-spacing: 0.4px;
 }
 
 @media (max-width: 500px) {

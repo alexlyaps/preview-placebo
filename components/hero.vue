@@ -1,4 +1,6 @@
 <template>
+  <div class="circle-bg circle-bg--left"></div>
+  <div class="circle-bg circle-bg--right"></div>
   <div class="hero-wrapper">
     <img
       :src="logoStar"
@@ -38,8 +40,9 @@
         alt="Alma Logo"
         width="396"
         height="809"
+        style="margin-top: 330px"
       />
-      <div class="subtitle-global">
+      <div class="subtitle-global" style="margin-top: 80px; opacity: 1">
         Alma — мобильный сервис, который поможет <br />
         научиться понимать себя глубже через <br />изучение личных чисел,
         космических циклов<br />
@@ -195,5 +198,45 @@ onMounted(() => {
       padding: 10px 0;
     }
   }
+}
+
+.circle-bg {
+  position: absolute;
+  width: 90vw;
+  height: 440px;
+  border-radius: 50%;
+  // opacity: 0.57;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 3px; /* толщина рамки */
+    border-radius: 50%;
+    background: linear-gradient(to top, #000, #fff);
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      transparent calc(100% - 3px),
+      black 100%
+    );
+    mask: radial-gradient(
+      farthest-side,
+      transparent calc(100% - 3px),
+      black 100%
+    );
+    z-index: -1;
+  }
+}
+
+.circle-bg--right {
+  left: 22vw;
+  top: 345px;
+  transform: rotate(165deg);
+}
+
+.circle-bg--left {
+  left: -27vw;
+  top: 474px;
+  transform: rotate(195deg);
 }
 </style>

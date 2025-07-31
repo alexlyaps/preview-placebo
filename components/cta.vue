@@ -41,7 +41,7 @@
         />
       </div>
     </div>
-    <div class="subtitle-global" style="margin-bottom: 50px">
+    <div class="subtitle-global" style="margin-bottom: 50px; opacity: 1">
       Мы тщательно отбираем, проверяем и обучаем <br />
       наставников. Каждый готов помочь разобраться в себе, <br />
       своих возможностях и гармонии с миром.
@@ -59,8 +59,8 @@
   align-items: center;
 }
 
-h2 {
-  margin-top: 204px;
+.cta__heading {
+  margin-top: 309px;
   max-width: 570px;
   width: 100%;
 }
@@ -69,8 +69,8 @@ h2 {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 85px;
-  margin-bottom: 100px;
+  margin-top: 60px;
+  margin-bottom: 75px;
 }
 
 .image-wrapper__inner {

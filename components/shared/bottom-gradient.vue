@@ -11,6 +11,7 @@
   position: absolute;
   bottom: 0px;
   left: 0;
+  z-index: -1;
 }
 
 .bottom-gradient {
