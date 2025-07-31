@@ -121,7 +121,7 @@ h2 {
     flex-direction: column;
     gap: 16px;
     margin-top: 40px;
-    padding: 0 8px;
+    padding: 0 2vw;
   }
   .cards__block {
     gap: 16px;

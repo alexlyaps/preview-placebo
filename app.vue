@@ -47,7 +47,6 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
 }
 
 main {
@@ -56,7 +55,7 @@ main {
 
 @media (max-width: 500px) {
   .wrapper {
-    padding: 0 5px;
+    padding: 0 1vw;
   }
 }
 </style>

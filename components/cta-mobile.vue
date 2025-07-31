@@ -67,7 +67,7 @@
 @use "assets/scss/main.scss" as *;
 
 .cta {
-  padding: 0 8px;
+  padding: 0 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
