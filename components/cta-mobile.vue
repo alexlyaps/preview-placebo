@@ -10,43 +10,52 @@
     <div class="image-wrapper">
       <div class="image-wrapper__inner">
         <img
-          src="/images/cta-phone@2x.png"
+          src="/images/mobile-cta.png"
           sizes="(max-width: 500px) 100vw, 392px"
           alt="App UI example"
-          width="392"
-          height="809"
+          width="336"
+          height="674"
         />
+        <div class="gradient"></div>
 
         <Badge
-          :top="325"
-          :left="349"
+          :top="360"
+          :left="170"
           text="Психологи"
           img="/images/badge-1@2x.png"
         />
         <Badge
-          :top="446"
-          :left="501"
+          :top="400"
+          :left="0"
           text="Астрологи"
           img="/images/badge-2@2x.png"
         />
         <Badge
-          :top="543"
-          :left="-361"
+          :top="475"
+          :left="144"
           text="Нумерологи"
           img="/images/badge-3@2x.png"
         />
         <Badge
-          :top="648"
-          :left="-160"
+          :top="548"
+          :left="72"
           text="Коучи"
           img="/images/badge-4@2x.png"
         />
       </div>
     </div>
-    <div class="subtitle-global" style="margin-bottom: 50px; opacity: 1">
-      Мы тщательно отбираем, проверяем и обучаем <br />
-      наставников. Каждый готов помочь разобраться в себе, <br />
-      своих возможностях и гармонии с миром.
+    <div
+      class="subtitle-global"
+      style="margin-bottom: 0px; opacity: 1; width: 90vw"
+    >
+      Мы тщательно отбираем, проверяем и обучаем наставников.
+    </div>
+    <div
+      class="subtitle-global"
+      style="margin-bottom: 50px; opacity: 1; width: 90vw"
+    >
+      Каждый готов помочь разобраться в себе, своих возможностях и гармонии с
+      миром.
     </div>
     <BaseButton variant="big" @click="">Скачать Alma</BaseButton>
   </section>
@@ -58,30 +67,43 @@
 @use "assets/scss/main.scss" as *;
 
 .cta {
+  padding: 0 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.cta__heading {
-  margin-top: 309px;
-  max-width: 570px;
-  width: 100%;
+br {
+  display: none;
 }
 
+h2.cta__heading {
+  margin: 100px 30px 0 30px !important;
+  font-size: 40px;
+}
 .image-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin-top: 60px;
-  margin-bottom: 75px;
-}
-
-.image-wrapper__inner {
   position: relative;
+  margin-bottom: 50px;
+}
+.image-wrapper__inner {
+  left: -13px;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-@media (max-width: 500px) {
+.gradient {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  background: linear-gradient(to top, rgba(#000, 1), rgba(#000, 0));
+}
+
+@media (min-width: 500px) {
   .cta {
     display: none;
   }

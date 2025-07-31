@@ -44,7 +44,7 @@
         </Card>
         <Card :height="290" url="/images/card-5@1x.png">
           <div class="card__text-wrapper">
-            <div class="card__text">
+            <div class="card__text mobile-text">
               Эксперты всегда рядом, чтобы ты мог<br />
               получить живую поддержку тогда,<br />
               когда она действительно нужна.
@@ -90,6 +90,10 @@ h2 {
   }
 }
 
+.cards__heading {
+  margin-top: 0px;
+}
+
 .cards__block {
   display: flex;
   flex-direction: column;
@@ -128,6 +132,14 @@ h2 {
     align-items: flex-start;
     width: 100%;
   }
+
+  br {
+    display: none;
+  }
+
+  .mobile-text {
+    width: 270px;
+  }
 }
 
 .card__text-wrapper {
@@ -141,12 +153,6 @@ h2 {
 
 <script setup lang="ts">
 const POSITION = 1000;
-
-// const scrollY = useScroll();
-// const gapVal = computed(() => Math.max((POSITION - scrollY.value) / 10, 24));
-// const translateVal = computed(() =>
-//   Math.max((POSITION - scrollY.value) / 10, 0)
-// );
 
 const gapVal = 24;
 const translateVal = 0;

@@ -1,11 +1,12 @@
 <template>
   <TopBar />
-  <AppButtons v-show="!isOpened" />
+  <AppButtons />
   <div class="wrapper">
     <Hero />
     <main>
       <Cards />
       <Cta />
+      <CtaMobile />
       <Faq />
     </main>
     <FooterComp />

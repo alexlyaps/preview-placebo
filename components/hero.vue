@@ -1,6 +1,8 @@
 <template>
-  <div class="circle-bg circle-bg--left"></div>
-  <div class="circle-bg circle-bg--right"></div>
+  <div class="circles-wrapper">
+    <div class="circle-bg circle-bg--left"></div>
+    <div class="circle-bg circle-bg--right"></div>
+  </div>
   <div class="hero-wrapper">
     <img
       :src="logoStar"
@@ -35,13 +37,14 @@
           себе в одном приложении.
         </div>
       </div>
-      <img
-        src="/images/hero-phone@2x.png"
-        alt="Alma Logo"
-        width="396"
-        height="809"
-        style="margin-top: 330px"
-      />
+      <div class="hero__image">
+        <img
+          src="/images/hero-phone@2x.png"
+          alt="Alma Logo"
+          width="396"
+          height="809"
+        />
+      </div>
       <div class="subtitle-global" style="margin-top: 80px; opacity: 1">
         Alma — мобильный сервис, который поможет <br />
         научиться понимать себя глубже через <br />изучение личных чисел,
@@ -145,6 +148,10 @@ onMounted(() => {
   }
 }
 
+.hero__image {
+  margin-top: 330px;
+}
+
 .hero__access {
   color: rgba(95, 95, 95, 1);
   font-size: 14px;
@@ -176,6 +183,21 @@ onMounted(() => {
     }
   }
 
+  .hero {
+    margin-bottom: 70px;
+  }
+
+  .hero__image {
+    margin-top: 120px;
+    width: 72.5vw;
+    aspect-ratio: 0.5;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   br {
     display: none;
   }
@@ -191,14 +213,28 @@ onMounted(() => {
     margin-bottom: 100px;
 
     h1 {
-      font-size: 45px;
-      margin: 183px 20px 0 20px;
+      font-size: 40px;
+      margin: 183px 10px 0 10px;
     }
     .btn__content {
       font-size: 15px;
       padding: 10px 0;
     }
   }
+
+  .hero-wrapper button,
+  .hero-wrapper .hero__access {
+    display: none;
+  }
+}
+
+.circles-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vw;
+  overflow: hidden;
 }
 
 .circle-bg {
@@ -239,5 +275,11 @@ onMounted(() => {
   left: -27vw;
   top: 474px;
   transform: rotate(195deg);
+}
+
+@media (max-width: 500px) {
+  .circle-bg {
+    display: none;
+  }
 }
 </style>

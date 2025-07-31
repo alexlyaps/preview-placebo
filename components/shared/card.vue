@@ -2,10 +2,12 @@
   <div
     :class="[
       'card',
-      { 'card--height-250px': url.includes('1') || url.includes('3') },
+      {
+        'card--height-250px': url.includes('-3') || url.includes('-3'),
+      },
       {
         'card--height-528px':
-          url.includes('4') || url.includes('2') || url.includes('5'),
+          url.includes('-1') || url.includes('-2') || url.includes('-4'),
       },
     ]"
     :style="{
@@ -52,11 +54,11 @@
   }
 
   .card--height-250px {
-    height: 250px !important;
+    height: 220px !important;
   }
 
   .card--height-528px {
-    height: 528px !important;
+    height: 120vw !important;
   }
 
   .card:hover .bg {

@@ -137,14 +137,18 @@ footer {
 
 @media (max-width: 500px) {
   footer {
-    height: 700px;
+    height: 350px;
     padding: 0 24px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .copy {
     font-display: column;
     background-color: transparent;
-    margin-top: 170px;
+    margin: auto;
   }
 
   .socials {

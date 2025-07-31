@@ -1,6 +1,8 @@
 <template>
   <div class="badge" :style="`top: ${top}px; left: ${left}px`">
-    <img :src="img" alt="App UI example" width="67" height="45" />
+    <div class="img-wrapper">
+      <img :src="img" width="67" height="45" />
+    </div>
     <span class="text">{{ text }}</span>
   </div>
 </template>
@@ -30,5 +32,27 @@ defineProps<{
 
 .text {
   font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .badge {
+    height: 58px;
+    padding: 0 10px;
+    gap: 21px;
+  }
+
+  .img-wrapper {
+    height: 33px;
+    width: 49px;
+
+    & img {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .text {
+    font-size: 16px;
+  }
 }
 </style>
