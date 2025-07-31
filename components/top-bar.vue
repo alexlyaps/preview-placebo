@@ -1,5 +1,5 @@
 <template>
-  <div class="topbar-wrapper">
+  <div class="topbar-wrapper" :style="`top: ${20 + scrollY}px;`">
     <div class="left">
       <div class="left__logos">
         <img :src="logoStar" alt="Alma Logo" width="40" height="33" class="" />
@@ -54,14 +54,23 @@
 <script setup lang="ts">
 import logoLogo from "~/assets/images/alma-logo.png";
 import logoStar from "~/assets/images/alma-star.png";
+
+const scrollY = ref(0);
+
+onMounted(() => {
+  window.addEventListener("scroll", () => {
+    scrollY.value = 1.11 * window.scrollY;
+  });
+});
 </script>
 
 <style lang="scss">
 .topbar-wrapper {
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate3D(-50%, 0, 0);
+  // transform-origin: top left;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

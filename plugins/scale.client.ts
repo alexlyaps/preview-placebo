@@ -12,6 +12,7 @@ export default defineNuxtPlugin(() => {
     document.getElementById("__app") ||
     document.documentElement;
 
+  console.log(container.clientHeight);
   // опознаём сафари (Desktop Safari, iOS Safari)
   const ua = navigator.userAgent;
   const isSafari = /Safari/.test(ua) && !/Chrome|Chromium|Edg|OPR/.test(ua);
@@ -31,7 +32,9 @@ export default defineNuxtPlugin(() => {
 
     // Устанавливаем для html и контейнера полную ширину
     document.documentElement.style.width = "100vw";
+    // document.documentElement.style.height = "100vh";
     document.documentElement.style.overflowX = "hidden";
+    document.documentElement.style.overflowY = "auto";
 
     if (container !== document.documentElement) {
       container.style.width = "100%";
@@ -53,5 +56,6 @@ export default defineNuxtPlugin(() => {
     }
     container.style.width = `${zoomFix}vw`;
     container.style.overflowX = "hidden";
+    console.log(container.clientHeight);
   }
 });

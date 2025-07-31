@@ -1,5 +1,7 @@
 <template>
+  <!-- <Teleport to="html"> -->
   <TopBar />
+  <!-- </Teleport> -->
   <AppButtons />
   <div class="wrapper">
     <Hero />
