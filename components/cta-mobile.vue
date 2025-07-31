@@ -10,7 +10,7 @@
     <div class="image-wrapper">
       <div class="image-wrapper__inner">
         <img
-          src="/images/mobile-cta.png"
+          src="/images/cta-phone@2x.png"
           sizes="(max-width: 500px) 100vw, 392px"
           alt="App UI example"
           width="336"

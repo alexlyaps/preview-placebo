@@ -12,13 +12,14 @@
   bottom: 0px;
   left: 0;
   z-index: -1;
+  width: 111vw;
 }
 
 .bottom-gradient {
   position: absolute;
   bottom: -766px;
   left: 0;
-  width: 100vw;
+  width: 111vw;
   height: 1941px;
   background: linear-gradient(
     180deg,

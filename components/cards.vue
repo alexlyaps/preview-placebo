@@ -63,6 +63,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 300px;
 }
 
 .cards__heading {
@@ -112,6 +113,10 @@ h2 {
 }
 
 @media (max-width: 500px) {
+  .cards-wrapper {
+    margin-top: 0px;
+  }
+
   .cards {
     flex-direction: column;
     gap: 16px;

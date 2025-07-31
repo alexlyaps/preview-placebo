@@ -109,12 +109,12 @@ onMounted(() => {
 
 .hero-wrapper {
   position: relative;
-  width: 100vw;
+  width: 111vw;
 
   .bg-gradient {
     position: absolute;
-    height: 1774px;
-    width: 100vw;
+    height: calc(1774px * 1.11);
+    width: 111vw;
     z-index: -1;
     left: 0;
     top: 0;
@@ -232,7 +232,7 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   width: 100%;
-  max-width: 100vw;
+  max-width: 111vw;
   height: 100vw;
   overflow: hidden;
 }
@@ -266,7 +266,7 @@ onMounted(() => {
 }
 
 .circle-bg--right {
-  left: 22vw;
+  left: 32vw;
   top: 345px;
   transform: rotate(165deg);
 }
@@ -280,6 +280,17 @@ onMounted(() => {
 @media (max-width: 500px) {
   .circle-bg {
     display: none;
+  }
+  .circles-wrapper {
+    display: none;
+  }
+
+  .hero-wrapper {
+    width: 100vw;
+
+    .bg-gradient {
+      width: 100vw;
+    }
   }
 }
 </style>
