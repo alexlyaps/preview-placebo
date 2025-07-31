@@ -108,9 +108,10 @@ const variantClass = `btn--${props.variant || "small"}`;
   display: flex;
   align-items: center;
   padding: 0 11px;
-  gap: 3px;
-  font-size: 15px;
-  font-weight: 500;
+  gap: 7px;
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  font-weight: 600;
   color: #fff;
 
   &:hover {

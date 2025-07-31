@@ -65,8 +65,9 @@ watch(expanded, async (val) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  border-bottom: 1px solid rgba(#fff, 0.15);
+  height: 70px;
+  border-top: 1px solid rgba(#fff, 0.15);
+  padding-top: 10px;
 }
 
 .header {
@@ -110,6 +111,6 @@ watch(expanded, async (val) => {
 
 .text {
   overflow: hidden;
-  // padding: 10px;
+  padding-bottom: 10px;
 }
 </style>

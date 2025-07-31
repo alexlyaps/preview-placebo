@@ -15,8 +15,8 @@
       <div class="right__app">
         <BaseButton variant="rounded">
           <svg
-            width="22"
-            height="26"
+            width="18"
+            height="21"
             viewBox="0 0 22 26"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +31,8 @@
 
         <BaseButton variant="rounded">
           <svg
-            width="22"
-            height="24"
+            width="18"
+            height="20"
             viewBox="0 0 22 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

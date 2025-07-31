@@ -30,6 +30,7 @@ provide("accordion-register", () => {
   flex-direction: column;
   max-width: 1100px;
   width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 </style>

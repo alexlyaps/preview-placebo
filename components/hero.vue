@@ -31,8 +31,8 @@
 
       <div class="motion-container" ref="containerRef">
         <div class="subtitle-global">
-          Персональные подсказки, проверенные эксперты и практики <br />
-          для заботы о себе в одном приложении.
+          Персональные подсказки, проверенные эксперты и практики для заботы о
+          себе в одном приложении.
         </div>
       </div>
       <img
@@ -96,6 +96,7 @@ onMounted(() => {
 <style scoped lang="scss">
 .motion-container {
   width: 100%;
+  max-width: 575px;
   visibility: hidden;
 }
 
@@ -205,7 +206,7 @@ onMounted(() => {
   width: 90vw;
   height: 440px;
   border-radius: 50%;
-  // opacity: 0.57;
+  opacity: 0.57;
 
   &::before {
     content: "";

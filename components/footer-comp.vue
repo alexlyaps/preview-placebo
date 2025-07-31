@@ -79,7 +79,7 @@ footer {
 .copy {
   margin-top: 160px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1110px;
   border-radius: 20px;
   height: 173px;
   background-color: rgba(0, 0, 0, 0.42);

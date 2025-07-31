@@ -49,6 +49,10 @@ onUnmounted(() => {
   width: 100vw;
 }
 
+main {
+  width: 100%;
+}
+
 @media (max-width: 500px) {
   .wrapper {
     padding: 0 5px;
