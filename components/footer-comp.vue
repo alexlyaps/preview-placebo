@@ -60,7 +60,7 @@
 <style scoped lang="scss">
 footer {
   margin-top: 50px;
-  width: 100vw;
+  width: 111vw;
   padding-bottom: 74px;
   display: flex;
   flex-direction: column;
@@ -137,6 +137,7 @@ footer {
 
 @media (max-width: 500px) {
   footer {
+    width: 100vw;
     height: 350px;
     padding: 0 24px;
     margin-top: 0;
