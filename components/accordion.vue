@@ -28,7 +28,7 @@ provide("accordion-register", () => {
 .accordion {
   display: flex;
   flex-direction: column;
-  max-width: 1100px;
+  max-width: 990px;
   width: 100%;
   margin: 0 auto;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);

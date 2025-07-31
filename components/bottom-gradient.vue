@@ -7,20 +7,19 @@
 <style scoped lang="scss">
 .wrapper {
   overflow: hidden;
-  height: calc(1941px - 766px);
+  height: calc(1747px - 689px);
   position: absolute;
   bottom: 0px;
   left: 0;
   z-index: -1;
-  width: 111vw;
 }
 
 .bottom-gradient {
   position: absolute;
-  bottom: -766px;
+  bottom: -689px;
   left: 0;
-  width: 111vw;
-  height: 1941px;
+  width: 100vw;
+  height: 1747px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
@@ -28,7 +27,7 @@
     rgba(106, 118, 169, 1) 100%
   );
   z-index: -1;
-  clip-path: inset(0 0 766px 0);
+  clip-path: inset(0 0 689px 0);
   overflow: hidden;
 }
 </style>

@@ -59,31 +59,31 @@
 
 <style scoped lang="scss">
 footer {
-  margin-top: 50px;
-  width: 111vw;
-  padding-bottom: 74px;
+  margin-top: 45px;
+  width: 100vw;
+  padding-bottom: 67px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .title {
-  margin-top: 180px;
+  margin-top: 162px;
   text-align: center;
-  max-width: 605px;
+  max-width: 545px;
   width: 100%;
-  font-size: 24px;
-  margin-bottom: 50px;
+  font-size: 22px;
+  margin-bottom: 45px;
 }
 
 .copy {
-  margin-top: 160px;
+  margin-top: 144px;
   width: 100%;
-  max-width: 1110px;
-  border-radius: 20px;
-  height: 173px;
+  max-width: 999px;
+  border-radius: 18px;
+  height: 156px;
   background-color: rgba(0, 0, 0, 0.42);
-  padding: 27px 32px;
+  padding: 24px 29px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,41 +105,40 @@ footer {
 
 .app-buttons {
   display: flex;
-  gap: 6px;
+  gap: 5px;
 }
 
 .socials__buttons {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   align-items: center;
 }
 
 .title {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .socials {
   display: flex;
-  gap: 36px;
+  gap: 32px;
 }
 
 .copyrights {
   opacity: 0.24;
   color: rgba(255, 255, 255, 1);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
 }
 
 .socials__mail {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 
 @media (max-width: 500px) {
   footer {
-    width: 100vw;
-    height: 350px;
-    padding: 0 24px;
+    height: 315px;
+    padding: 0 22px;
     margin-top: 0;
     display: flex;
     align-items: center;

@@ -41,7 +41,7 @@ const activeCity = ref("Москва");
 
 <style>
 .nav-menu {
-  margin-top: 34px;
+  margin-top: 31px;
 }
 
 .items span:hover {
@@ -62,17 +62,17 @@ const activeCity = ref("Москва");
 .cities span.active::before {
   content: "";
   position: absolute;
-  left: -10px;
+  left: -9px;
   top: calc(50% - 2px);
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background-color: #fff;
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 7px;
 }
 
 .separator {
-  height: 22px;
+  height: 20px;
 }
 </style>

@@ -63,25 +63,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 300px;
 }
 
 .cards__heading {
-  max-width: 530px;
+  max-width: 477px;
   width: 100%;
 }
 
 .cards {
   display: flex;
   flex-direction: row;
-  gap: 24px;
-  margin-top: 60px;
+  gap: 22px;
+  margin-top: 54px;
 }
 
 h2 {
-  margin-top: 204px;
+  margin-top: 184px;
   font-weight: 300;
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
 }
 
@@ -100,36 +99,32 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 
 .card__text {
   font-family: Manrope-Regular;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
-  width: 440px;
-  line-height: 27px;
+  width: 396px;
+  line-height: 24px;
   letter-spacing: 0.4px;
 }
 
 @media (max-width: 500px) {
-  .cards-wrapper {
-    margin-top: 0px;
-  }
-
   .cards {
     flex-direction: column;
-    gap: 16px;
-    margin-top: 40px;
-    padding: 0 2vw;
+    gap: 14px;
+    margin-top: 36px;
+    padding: 0 7px;
   }
   .cards__block {
-    gap: 16px;
+    gap: 14px;
     width: 100%;
   }
   .card__text {
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     box-sizing: border-box;
     word-break: break-word;
   }
@@ -143,7 +138,7 @@ h2 {
   }
 
   .mobile-text {
-    width: 270px;
+    width: 243px;
   }
 }
 

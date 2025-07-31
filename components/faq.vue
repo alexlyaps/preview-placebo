@@ -73,11 +73,11 @@
 
 <style>
 .faq {
-  margin-top: 300px;
+  margin-top: 270px;
 }
 
 .accordion-content {
-  padding: 10px 0;
+  padding: 9px 0;
 }
 
 p {
@@ -86,7 +86,7 @@ p {
 
 @media (max-width: 500px) {
   .faq {
-    margin: 110px auto 0 auto;
+    margin: 99px auto 0 auto;
     width: 90vw;
   }
 }

@@ -3,10 +3,10 @@
     :class="[
       'card',
       {
-        'card--height-250px': url.includes('-3') || url.includes('-3'),
+        'card--height-225px': url.includes('-3') || url.includes('-3'),
       },
       {
-        'card--height-528px':
+        'card--height-475px':
           url.includes('-1') || url.includes('-2') || url.includes('-4'),
       },
     ]"
@@ -21,10 +21,10 @@
 
 <style scoped lang="scss">
 .card {
-  width: 542px;
+  width: 488px;
   max-width: 100%;
-  border-radius: 33px;
-  padding: 56px 50px;
+  border-radius: 30px;
+  padding: 50px 45px;
   overflow: hidden;
   position: relative;
 }
@@ -47,17 +47,17 @@
 @media (max-width: 500px) {
   .card {
     width: 100%;
-    padding: 27px 30px;
-    border-radius: 28px;
+    padding: 24px 27px;
+    border-radius: 25px;
     box-sizing: border-box;
-    height: 280px;
+    height: 252px;
   }
 
-  .card--height-250px {
-    height: 220px !important;
+  .card--height-225px {
+    height: 198px !important;
   }
 
-  .card--height-528px {
+  .card--height-475px {
     height: 120vw !important;
   }
 

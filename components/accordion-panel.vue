@@ -65,13 +65,13 @@ watch(expanded, async (val) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 63px;
   border-top: 1px solid rgba(#fff, 0.15);
-  padding-top: 10px;
+  padding-top: 9px;
 }
 
 .header {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Manrope", sans-serif;
   font-weight: 400;
 }
@@ -111,6 +111,6 @@ watch(expanded, async (val) => {
 
 .text {
   overflow: hidden;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
 }
 </style>

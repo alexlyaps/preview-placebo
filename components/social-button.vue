@@ -4,7 +4,7 @@
       <Icon
         v-if="variant === 'vk' || variant === 'tg'"
         :name="`my-icon:${variant}`"
-        :size="variant === 'vk' ? '6px' : '8px'"
+        :size="variant === 'vk' ? '5px' : '7px'"
       />
       <div v-else-if="variant === 'instagram'" class="instagram-logo">
         <div class="instagram-logo__child"></div>
@@ -26,8 +26,8 @@ const variantClass = `btn--${props.variant}`;
 <style scoped lang="scss">
 // базовый стиль
 .btn {
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   background-color: rgba(255, 255, 255, 0.23);
   border: none;
   display: flex;
@@ -51,8 +51,8 @@ const variantClass = `btn--${props.variant}`;
 }
 
 .btn--youtube {
-  width: 22px;
-  height: 16px;
+  width: 20px;
+  height: 14px;
   border-radius: 5px;
 
   &::after {
@@ -61,15 +61,15 @@ const variantClass = `btn--${props.variant}`;
     width: 0;
     height: 0;
     margin-left: 3px;
-    border-left: 8px solid #fff;
+    border-left: 7px solid #fff;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
   }
 }
 
 .instagram-logo {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: #fff;
 

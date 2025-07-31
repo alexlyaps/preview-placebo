@@ -26,24 +26,24 @@ const inputValue = ref("");
 .input-comp {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
   width: 100%;
 }
 
 label {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 
 input {
   width: 100%;
-  height: 54px;
-  border-radius: 13px;
+  height: 49px;
+  border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.09);
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  padding: 0 20px;
+  padding: 0 18px;
   outline: none;
   border: none;
 
