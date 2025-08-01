@@ -90,12 +90,12 @@ onMounted(() => {
         { opacity: [0, 1], y: [10, 0] },
         {
           type: "spring",
-          duration: 0.25,
+          duration: 1,
           bounce: 0,
-          delay: stagger(0.01),
+          delay: stagger(0.1),
         }
       );
-    }, 1000);
+    }, 100);
   });
 });
 </script>
