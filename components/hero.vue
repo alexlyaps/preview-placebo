@@ -28,13 +28,17 @@
           ease: [0, 0.1, 0.8, 1.01],
         }"
       >
-        <h1>Твое пространство для душевного пути</h1>
+        <h1>
+          Твое пространство для душевного <br />
+          пути
+        </h1>
       </motion.div>
 
       <div class="motion-container" ref="containerRef">
         <div class="subtitle-global">
-          Персональные подсказки, проверенные эксперты и практики для заботы о
-          себе в одном приложении.
+          Персональные подсказки, проверенные эксперты и практики для заботы
+          <br />
+          о себе в одном приложении.
         </div>
       </div>
       <div class="hero__image">
@@ -162,8 +166,12 @@ onMounted(() => {
   margin-top: 18px;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 500px) {
   h1 br {
+    display: none;
+  }
+
+  .subtitle-global br {
     display: none;
   }
 
@@ -188,7 +196,7 @@ onMounted(() => {
   }
 
   .hero__image {
-    margin-top: 108px;
+    margin-top: 148px;
     width: 72.5vw;
     aspect-ratio: 0.5;
 
@@ -204,6 +212,11 @@ onMounted(() => {
 
   h1 br {
     display: block;
+  }
+
+  .subtitle-global {
+    width: 90%;
+    margin: 40px auto;
   }
 
   .hero {

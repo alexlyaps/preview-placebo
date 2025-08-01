@@ -13,7 +13,7 @@
     </main>
     <FooterComp />
   </div>
-  <ApplicationForm class="form" v-show="isOpened" />
+  <!-- <ApplicationForm class="form" v-show="isOpened" /> -->
   <BottomGradient />
 </template>
 

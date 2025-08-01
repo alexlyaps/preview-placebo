@@ -3,7 +3,7 @@
     :class="[
       'card',
       {
-        'card--height-225px': url.includes('-3') || url.includes('-3'),
+        'card--height-225px': url.includes('-3') || url.includes('-5'),
       },
       {
         'card--height-475px':

@@ -63,7 +63,7 @@ const variantClass = `btn--${props.variant || "small"}`;
 
 .btn--mobile-store {
   height: 36px;
-  border-radius: 9px;
+  border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;

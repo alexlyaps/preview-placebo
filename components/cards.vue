@@ -118,6 +118,7 @@ h2 {
     flex-direction: column;
     gap: 14px;
     margin-top: 36px;
+    max-width: 94vw;
     padding: 0 7px;
   }
   .cards__block {

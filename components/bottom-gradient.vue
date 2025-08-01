@@ -20,7 +20,7 @@
   bottom: -689px;
   left: 0;
   width: 100vw;
-  height: 1941px;
+  height: 1641px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,

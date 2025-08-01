@@ -71,6 +71,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 94vw;
+  margin: 0 auto;
 }
 
 br {
