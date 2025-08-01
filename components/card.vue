@@ -21,7 +21,7 @@
 
 <style scoped lang="scss">
 .card {
-  width: 488px;
+  width: 448px;
   max-width: 100%;
   border-radius: 30px;
   padding: 50px 45px;

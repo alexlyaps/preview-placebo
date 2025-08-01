@@ -73,7 +73,7 @@
 
 <style>
 .faq {
-  margin-top: 270px;
+  margin-top: 240px;
 }
 
 .accordion-content {

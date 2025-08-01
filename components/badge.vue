@@ -20,18 +20,18 @@ defineProps<{
 // базовый стиль
 .badge {
   position: absolute;
-  height: 70px;
+  height: 63px;
   display: flex;
-  gap: 26px;
+  gap: 18px;
   align-items: center;
-  padding: 0 18px;
-  border-radius: 35px;
+  padding: 0 12px;
+  border-radius: 32px;
   background-color: rgba(47, 47, 47, 0.55);
   backdrop-filter: blur(9px);
 }
 
 .text {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 @media (max-width: 500px) {

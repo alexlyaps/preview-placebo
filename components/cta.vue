@@ -13,31 +13,31 @@
           src="/images/cta-phone@2x.png"
           sizes="(max-width: 500px) 100vw, 353px"
           alt="App UI example"
-          width="392"
-          height="809"
+          width="314"
+          height="647"
         />
 
         <Badge
-          :top="325"
-          :left="349"
+          :top="275"
+          :left="279"
           text="Психологи"
           img="/images/badge-1@2x.png"
         />
         <Badge
-          :top="446"
-          :left="501"
+          :top="376"
+          :left="401"
           text="Астрологи"
           img="/images/badge-2@2x.png"
         />
         <Badge
-          :top="543"
-          :left="-361"
+          :top="443"
+          :left="-261"
           text="Нумерологи"
           img="/images/badge-3@2x.png"
         />
         <Badge
-          :top="648"
-          :left="-160"
+          :top="528"
+          :left="-90"
           text="Коучи"
           img="/images/badge-4@2x.png"
         />
@@ -64,7 +64,7 @@
 }
 
 .cta__heading {
-  margin-top: 278px;
+  margin-top: 248px;
   max-width: 513px;
   width: 100%;
 }

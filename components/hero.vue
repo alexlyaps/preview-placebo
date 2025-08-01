@@ -41,8 +41,8 @@
         <img
           src="/images/hero-phone@2x.png"
           alt="Alma Logo"
-          width="396"
-          height="809"
+          width="317"
+          height="647"
         />
       </div>
       <div class="subtitle-global" style="margin-top: 72px; opacity: 1">
@@ -149,7 +149,7 @@ onMounted(() => {
 }
 
 .hero__image {
-  margin-top: 297px;
+  margin-top: 187px;
 }
 
 .hero__access {

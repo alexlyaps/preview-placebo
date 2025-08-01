@@ -12,14 +12,14 @@
       :style="`gap: ${gapVal}px; transform: translateY(${translateVal}px)`"
     >
       <div class="cards__block">
-        <Card :height="635" url="/images/card-1@2x.png">
+        <Card :height="570" url="/images/card-1@2x.png">
           <div class="card__text">
             Личные рекомендации каждый <br />
             день подсказывают лучшее <br />
             время для действий, отдыха и <br />фокуса.
           </div>
         </Card>
-        <Card :height="564" url="/images/card-2@1x.png">
+        <Card :height="510" url="/images/card-2@1x.png">
           <div class="card__text-wrapper">
             <div class="card__text">
               Практики, медитации и курсы помогают<br />
@@ -30,19 +30,19 @@
         </Card>
       </div>
       <div class="cards__block">
-        <Card :height="266" url="/images/card-3@1x.png">
+        <Card :height="250" url="/images/card-3@1x.png">
           <div class="card__text">
             Обученный AI-ассистент <br />отвечает на вопросы, даёт
             <br />подсказки и мягко направляет в <br />нужный момент.
           </div>
         </Card>
-        <Card :height="624" url="/images/card-4@2x.png">
+        <Card :height="560" url="/images/card-4@2x.png">
           <div class="card__text">
             Полная персональная карта <br />личности на основе 10 систем<br />
             самопознания
           </div>
         </Card>
-        <Card :height="290" url="/images/card-5@1x.png">
+        <Card :height="253" url="/images/card-5@1x.png">
           <div class="card__text-wrapper">
             <div class="card__text mobile-text">
               Эксперты всегда рядом, чтобы ты мог<br />
@@ -60,6 +60,7 @@
 .cards-wrapper {
   width: 100%;
   display: flex;
+  margin-top: 10rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -68,13 +69,14 @@
 .cards__heading {
   max-width: 477px;
   width: 100%;
+  font-size: 40px;
 }
 
 .cards {
   display: flex;
   flex-direction: row;
   gap: 22px;
-  margin-top: 54px;
+  margin-top: 24px;
 }
 
 h2 {

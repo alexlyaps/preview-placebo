@@ -7,7 +7,8 @@
 <style scoped lang="scss">
 .wrapper {
   overflow: hidden;
-  height: calc(1747px - 689px);
+  height: calc(1941px - 650px);
+  width: 100vw;
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -19,7 +20,7 @@
   bottom: -689px;
   left: 0;
   width: 100vw;
-  height: 1747px;
+  height: 1941px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
