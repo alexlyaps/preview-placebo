@@ -27,7 +27,7 @@ export default defineNuxtConfig({
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "description", content: "Alma" },
         { name: "apple-mobile-web-app-title", content: "Alma" },
-        { name: "theme-color", content: "#ffffff" },
+        { name: "theme-color", content: "#000000" },
       ],
       link: [
         { rel: "icon", type: "image/png", href: "/my-favicon.ico" },
