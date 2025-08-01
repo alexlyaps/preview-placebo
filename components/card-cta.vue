@@ -1,5 +1,5 @@
 <template>
-  <div class="card-cta">
+  <div class="card-cta fade-item">
     <div class="img-wrapper">
       <img
         ref="imgEl"
@@ -20,7 +20,7 @@
           {{ line }}<br />
         </span>
       </div>
-      <BaseButton class="small" v-if="button" @click="setIsOpened"
+      <BaseButton variant="small" v-if="button" @click="setIsOpened"
         >Оставить заявку</BaseButton
       >
     </div>

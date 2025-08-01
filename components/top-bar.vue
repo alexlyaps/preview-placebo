@@ -6,8 +6,12 @@
         <img :src="logoLogo" alt="Alma Logo" width="70" height="20" class="" />
       </div>
       <div class="left__buttons">
-        <BaseButton variant="text">О сервисе</BaseButton>
-        <BaseButton variant="text">Экспертам</BaseButton>
+        <BaseButton variant="text"
+          ><NuxtLink to="/">О сервисе</NuxtLink></BaseButton
+        >
+        <BaseButton variant="text"
+          ><NuxtLink to="/experts">Экспертам</NuxtLink></BaseButton
+        >
       </div>
     </div>
     <div class="right">

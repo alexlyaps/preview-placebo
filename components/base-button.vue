@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  variant?: "big" | "store" | "mobile-store" | "rounded" | "text";
+  variant?: "big" | "store" | "mobile-store" | "rounded" | "text" | "small";
 }>();
 
 const variantClass = `btn--${props.variant || "small"}`;
@@ -85,11 +85,11 @@ const variantClass = `btn--${props.variant || "small"}`;
 .btn--small {
   background-color: #ffffff;
   color: #000000;
-  height: 36px;
-  padding: 6px 18px;
+  height: 40px;
+  padding: 7px 20px;
   border: 1px solid #000;
-  border-radius: 11px;
-  font-size: 14px;
+  border-radius: 12px;
+  font-size: 16px;
   font-weight: 600;
 
   &:hover {
