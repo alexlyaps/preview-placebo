@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="copy">
+    <div class="copy fade-item">
       <div class="copy__first-row">
         <img :src="logo" alt="Alma Logo" width="80" height="22" />
         <div class="socials">

@@ -21,6 +21,8 @@
 import "modern-normalize";
 import "animate.css";
 import useApplicationForm from "~/composables/useApplicationForm";
+import { useFadeOnScroll } from "~/composables/useFadeOnScroll";
+useFadeOnScroll();
 
 const { isOpened, setIsOpened } = useApplicationForm();
 

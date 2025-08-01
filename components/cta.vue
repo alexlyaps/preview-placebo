@@ -1,13 +1,13 @@
 <template>
   <section class="cta">
-    <h2 class="cta__heading">
+    <h2 class="cta__heading fade-item">
       Наши эксперты<br />
       на расстоянии одного <br />клика
     </h2>
-    <div class="subtitle-global">
+    <div class="subtitle-global fade-item">
       Выбирайте область и бронируйте личную сессию с экспертом
     </div>
-    <div class="image-wrapper">
+    <div class="image-wrapper fade-item">
       <div class="image-wrapper__inner">
         <img
           src="/images/cta-phone@2x.png"
@@ -43,12 +43,17 @@
         />
       </div>
     </div>
-    <div class="subtitle-global" style="margin-bottom: 45px; opacity: 1">
+    <div
+      class="subtitle-global fade-item"
+      style="margin-bottom: 45px; opacity: 1"
+    >
       Мы тщательно отбираем, проверяем и обучаем <br />
       наставников. Каждый готов помочь разобраться в себе, <br />
       своих возможностях и гармонии с миром.
     </div>
-    <BaseButton variant="big" @click="">Скачать Alma</BaseButton>
+    <BaseButton variant="big" @click="" class="fade-item"
+      >Скачать Alma</BaseButton
+    >
   </section>
 </template>
 

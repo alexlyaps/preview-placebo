@@ -1,5 +1,5 @@
 <template>
-  <div class="circles-wrapper">
+  <div class="circles-wrapper animate__animated animate__fadeIn">
     <div class="circle-bg circle-bg--left"></div>
     <div class="circle-bg circle-bg--right"></div>
   </div>
@@ -41,7 +41,7 @@
           о себе в одном приложении.
         </div>
       </div>
-      <div class="hero__image">
+      <div class="hero__image animate__animated animate__fadeIn">
         <img
           src="/images/hero-phone@2x.png"
           alt="Alma Logo"

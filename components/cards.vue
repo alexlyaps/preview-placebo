@@ -1,10 +1,10 @@
 <template>
   <div class="cards-wrapper">
-    <h2 class="cards__heading">
+    <h2 class="cards__heading fade-item">
       Направляй свой день <br />
       вместе с Alma
     </h2>
-    <div class="subtitle-global" style="letter-spacing: 0.4px">
+    <div class="subtitle-global fade-item" style="letter-spacing: 0.4px">
       Приложение альма дает персонализированные советы каждый день
     </div>
     <section
