@@ -67,6 +67,7 @@
           </p>
         </div>
       </AccordionPanel>
+      <div class="vertical-line width-item"></div>
     </Accordion>
   </section>
 </template>

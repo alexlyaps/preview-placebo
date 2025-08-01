@@ -1,5 +1,7 @@
 <template>
-  <div class="accordion"><slot /></div>
+  <div class="accordion">
+    <slot />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -31,6 +33,5 @@ provide("accordion-register", () => {
   max-width: 990px;
   width: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 </style>

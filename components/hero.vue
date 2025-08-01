@@ -23,22 +23,22 @@
         }"
         :animate="{ opacity: 1, backgroundColor: 1, scale: 1, translateY: 0 }"
         :transition="{
-          duration: 1.8,
-          delay: 0.1,
-          ease: [0, 0.1, 0.8, 1.01],
+          duration: 0.8,
+          delay: 0,
+          ease: [0, 0.2, 0.58, 1],
         }"
       >
         <h1>
-          Твое пространство для душевного <br />
+          Твое пространство <br />
+          для душевного<br />
           пути
         </h1>
       </motion.div>
 
       <div class="motion-container" ref="containerRef">
         <div class="subtitle-global">
-          Персональные подсказки, проверенные эксперты и практики для заботы
-          <br />
-          о себе в одном приложении.
+          Персональные подсказки, проверенные эксперты и практики для заботы о
+          себе в одном приложении.
         </div>
       </div>
       <div class="hero__image animate__animated animate__fadeIn">
@@ -117,7 +117,7 @@ onMounted(() => {
 
   .bg-gradient {
     position: absolute;
-    height: 1597px;
+    height: 1774px;
     width: 100vw;
     z-index: -1;
     left: 0;

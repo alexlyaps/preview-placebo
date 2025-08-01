@@ -1,5 +1,5 @@
 <template>
-  <div class="badge" :style="`top: ${top}px; left: ${left}px`">
+  <div class="badge fade-item" :style="`top: ${top}px; left: ${left}px`">
     <div class="img-wrapper">
       <img :src="img" width="67" height="45" />
     </div>

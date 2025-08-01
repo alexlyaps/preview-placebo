@@ -41,7 +41,7 @@
 <style scoped lang="scss">
 .appbuttons-wrapper {
   position: fixed;
-  bottom: 62px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

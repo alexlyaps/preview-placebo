@@ -21,8 +21,8 @@
 import "modern-normalize";
 import "animate.css";
 import useApplicationForm from "~/composables/useApplicationForm";
-import { useFadeOnScroll } from "~/composables/useFadeOnScroll";
-useFadeOnScroll();
+import { useIntersectionVisibility } from "~/composables/useFadeOnScroll";
+useIntersectionVisibility([".fade-item", ".width-item"]);
 
 const { isOpened, setIsOpened } = useApplicationForm();
 

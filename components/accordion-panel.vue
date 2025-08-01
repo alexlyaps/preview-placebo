@@ -1,5 +1,6 @@
 <template>
   <div class="accordion-panel">
+    <div class="vertical-line width-item"></div>
     <div class="accordion-panel__header" @click="toggle">
       <div class="header">{{ title }}</div>
       <div class="icon" :class="{ expanded: expanded }">
@@ -57,6 +58,8 @@ watch(expanded, async (val) => {
 </script>
 
 <style scoped lang="scss">
+@use "assets/scss/main.scss" as *;
+
 .accordion-panel {
   cursor: pointer;
 }
@@ -66,7 +69,7 @@ watch(expanded, async (val) => {
   justify-content: space-between;
   align-items: center;
   height: 63px;
-  border-top: 1px solid rgba(#fff, 0.15);
+  // border-top: 1px solid rgba(#fff, 0.15);
   padding-top: 9px;
 }
 

@@ -63,8 +63,9 @@ h2 {
 }
 
 @media (max-width: 500px) {
-  h1 {
-    font-size: 2.531rem;
+  h1,
+  h2 {
+    font-size: 36px !important;
   }
 
   html,
@@ -128,4 +129,19 @@ a {
 .fade-item.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.width-item {
+  transition: width 2s ease-out;
+  /* при желании можно добавить translateY для «входа» сверху */
+  // transition-property: opacity, transform;
+  width: 0%;
+}
+
+.width-item.visible {
+  width: 100%;
+}
+
+.vertical-line {
+  border-top: 1px solid rgba(#fff, 0.15);
 }
