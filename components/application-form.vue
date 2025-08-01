@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper animate__animated animate__zoomIn">
     <div class="cross" @click="setIsOpened">×</div>
     <InputComp label="Как вас зовут" placeholder="Ваше имя" />
     <InputComp
@@ -27,8 +27,8 @@ const { isOpened, setIsOpened } = useApplicationForm();
 .wrapper {
   position: fixed;
   top: calc(50vh - 295px);
-  left: 50%;
-  transform: translateX(-50%);
+  left: calc(50% - 227px);
+  // transform: translateX(-50%);
   z-index: 10;
   display: flex;
   flex-direction: column;

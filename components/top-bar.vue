@@ -1,10 +1,24 @@
 <template>
   <div class="topbar-wrapper animate__animated animate__fadeInDown">
     <div class="left">
-      <div class="left__logos">
-        <img :src="logoStar" alt="Alma Logo" width="40" height="33" class="" />
-        <img :src="logoLogo" alt="Alma Logo" width="70" height="20" class="" />
-      </div>
+      <NuxtLink to="/">
+        <div class="left__logos">
+          <img
+            :src="logoStar"
+            alt="Alma Logo"
+            width="40"
+            height="33"
+            class=""
+          />
+          <img
+            :src="logoLogo"
+            alt="Alma Logo"
+            width="70"
+            height="20"
+            class=""
+          />
+        </div>
+      </NuxtLink>
       <div class="left__buttons">
         <BaseButton variant="text"
           ><NuxtLink to="/">О сервисе</NuxtLink></BaseButton

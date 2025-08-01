@@ -1,7 +1,10 @@
 <template>
   <div
     :class="[
-      'card fade-item',
+      'card',
+      {
+        'fade-item': !url.includes('-1') && !url.includes('-4'),
+      },
       {
         'card--height-225px': url.includes('-3') || url.includes('-5'),
       },

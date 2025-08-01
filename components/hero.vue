@@ -74,7 +74,7 @@ const containerRef = ref<HTMLDivElement | null>(null);
 
 onMounted(() => {
   document.fonts.ready.then(async () => {
-    await nextTick();
+    // await nextTick();
     if (!containerRef.value) return;
 
     // Hide the container until the fonts are loaded
@@ -90,9 +90,9 @@ onMounted(() => {
         { opacity: [0, 1], y: [10, 0] },
         {
           type: "spring",
-          duration: 2,
+          duration: 0.25,
           bounce: 0,
-          delay: stagger(0.1),
+          delay: stagger(0.01),
         }
       );
     }, 1000);

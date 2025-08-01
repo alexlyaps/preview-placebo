@@ -131,7 +131,7 @@ onMounted(() => {
   width: 640px;
 
   h1 {
-    margin-top: 337px;
+    margin-top: 300px;
   }
 
   .hero__title {
