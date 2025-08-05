@@ -32,6 +32,8 @@
 
 <style scoped lang="scss">
 .topbar-wrapper {
+  padding: 20px;
+
   position: relative;
   display: flex;
   flex-direction: row;

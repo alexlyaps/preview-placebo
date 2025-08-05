@@ -40,6 +40,8 @@
 .hero {
   position: relative;
   margin-top: 183px;
+  height: 800px;
+  padding: 20px;
 }
 
 .hero__image-wrapper {
@@ -52,8 +54,8 @@
 
 .hero__ball-wrapper {
   position: absolute;
-  top: 500px;
-  left: 40%;
+  top: 550px;
+  left: 37%;
   transform: translateX(-50%);
 }
 

@@ -18,7 +18,6 @@ const variantClass = `btn--${props.variant || "small"}`;
 .btn {
   padding: 0 1rem;
   border-radius: 9px;
-  font-weight: 600;
   transition: 0.2s all ease-in-out, 0.02s border ease-in-out;
   height: 32px;
   border: none;
@@ -28,19 +27,20 @@ const variantClass = `btn--${props.variant || "small"}`;
 // варианты
 .btn--big {
   background-color: #ffffff;
-  color: #000000;
-  height: 58px;
-  padding: 18px 57px;
-  border: 1px solid #000;
-  border-radius: 15px;
-  font-size: 16px;
+  height: 73px;
+  width: 274px;
+  // padding: 18px 57px;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 22px;
+  background-color: rgba(151, 0, 0, 1);
 
   &:hover {
-    background-color: $light-gray;
+    background-color: rgba(188, 117, 95, 1);
   }
 
   &:active {
-    background-color: #676d70;
+    background-color: #5a1444;
   }
 
   &:disabled {

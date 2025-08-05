@@ -20,6 +20,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(242, 236, 230, 1);
   color: rgba(97, 71, 71, 1);
+  font-size: 20px;
   max-width: 100vw;
   height: 100vh;
   overflow-x: hidden;
@@ -30,11 +31,10 @@ body {
   position: relative;
   max-width: 100vw;
   height: 100vh;
-  padding: 20px;
 }
 
-#vue-tracer-overlay {
-  display: none !important;
+p {
+  margin-top: 0;
 }
 
 h2,
@@ -46,10 +46,16 @@ h3 {
   text-align: center;
   line-height: 97px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 h3 {
   font-size: 95px;
+  margin-bottom: 3rem;
+}
+
+p {
+  text-align: center;
 }
 
 li {

@@ -1,7 +1,13 @@
 <template>
-  <h1>SUBSTANCE FOOD</h1>
   <TopBar />
-  <Hero />
+  <h1>SUBSTANCE FOOD</h1>
+  <main>
+    <Hero />
+    <Gallery />
+    <MenuComp />
+    <Cta />
+  </main>
+  <FooterComp />
 </template>
 
 <script setup lang="ts"></script>
