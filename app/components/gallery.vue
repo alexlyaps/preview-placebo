@@ -23,17 +23,32 @@
       </p>
     </div>
     <div class="gallery__images">
-      <div class="icecream-wrapper">
+      <motion.div class="icecream-wrapper" :style="{ translateX }">
         <img
           src="/images/gallery-icecream@2x.png"
           alt="Vinyl"
           width="248"
           height="248"
         />
-      </div>
+      </motion.div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { motion, useScroll } from "motion-v";
+const { scrollYProgress } = useScroll();
+// Добавляем плавность к scrollYProgress с помощью useSpring
+const smoothScrollProgress = useSpring(scrollYProgress, {
+  stiffness: 100,
+  damping: 30,
+  restDelta: 0.001,
+});
+
+// Используем плавный прогресс для трансформации
+const translateX = useTransform(smoothScrollProgress, [0.3, 0.6], [0, 1000]);
+// const rotateZ = useTransform(smoothScrollProgress, [0, 0.1], [-500, -300]);
+</script>
 
 <style scoped lang="scss">
 .gallery {

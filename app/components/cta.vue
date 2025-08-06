@@ -18,15 +18,18 @@
     <BaseButton variant="big" style="margin-top: 30px"
       >Открыть в Яндексе</BaseButton
     >
-    <div class="menu__images">
-      <div class="volain-wrapper">
+    <div class="cta__images">
+      <motion.div
+        class="volain-wrapper"
+        :style="{ rotateZ, translateX, translateY }"
+      >
         <img
           src="/images/cta-volain@2x.png"
           alt="Angel"
           width="171"
           height="171"
         />
-      </div>
+      </motion.div>
     </div>
     <div class="subtitle" style="margin-top: 96px">
       <p>
@@ -34,11 +37,7 @@
         бронируй по кнопке
       </p>
     </div>
-    <BaseButton
-      variant="big"
-      style="margin-top: 30px; background-color: #292f6e"
-      >Бронь</BaseButton
-    >
+    <BaseButton variant="big-blue">Бронь</BaseButton>
     <div class="phone">+ 7 926 000-22-00</div>
     <div class="whatsapp-icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -51,6 +50,23 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { motion, useScroll } from "motion-v";
+const { scrollYProgress } = useScroll();
+// Добавляем плавность к scrollYProgress с помощью useSpring
+const smoothScrollProgress = useSpring(scrollYProgress, {
+  stiffness: 100,
+  damping: 30,
+  restDelta: 0.001,
+});
+
+// Используем плавный прогресс для трансформации
+
+const rotateZ = useTransform(smoothScrollProgress, [0.6, 1], [500, -300]);
+const translateX = useTransform(smoothScrollProgress, [0.6, 1], [500, -300]);
+const translateY = useTransform(smoothScrollProgress, [0.6, 1], [500, -300]);
+</script>
 
 <style scoped lang="scss">
 .cta {
@@ -71,7 +87,7 @@ h3 {
   left: -55px;
 }
 
-.menu__images {
+.cta__images {
   position: relative;
   width: 765px;
   height: 375px;

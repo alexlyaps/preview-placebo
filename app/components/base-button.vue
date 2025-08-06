@@ -6,7 +6,14 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  variant?: "big" | "store" | "mobile-store" | "rounded" | "text" | "small";
+  variant?:
+    | "big"
+    | "big-blue"
+    | "store"
+    | "mobile-store"
+    | "rounded"
+    | "text"
+    | "small";
 }>();
 
 const variantClass = `btn--${props.variant || "small"}`;
@@ -45,6 +52,20 @@ const variantClass = `btn--${props.variant || "small"}`;
 
   &:disabled {
     color: #888;
+  }
+}
+
+.btn--big-blue {
+  height: 73px;
+  width: 274px;
+  border-radius: 22px;
+  font-size: 22px;
+  margin-top: 30px;
+  background-color: #292f6e;
+  color: rgba(255, 255, 255, 1);
+
+  &:hover {
+    background-color: #646cc6;
   }
 }
 
