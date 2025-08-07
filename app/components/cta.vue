@@ -1,21 +1,22 @@
 <template>
   <section class="cta">
     <h3>
-      meeting <br />
+      <span style="position: relative"
+        ><span class="point-wrapper"
+          ><img
+            src="/images/cta-point@2x.png"
+            alt="Pointer"
+            :width="Math.min(Math.max((88 / DEFAULT_WIDTH) * width, 44), 88)"
+            :height="Math.min(Math.max((106 / DEFAULT_WIDTH) * width, 53), 106)"
+          /> </span
+        >m</span
+      >eeting <br />
       point
-      <span class="point-wrapper"
-        ><img
-          src="/images/cta-point@2x.png"
-          alt="Pointer"
-          :width="Math.max((88 / DEFAULT_WIDTH) * width, 44)"
-          :height="Math.max((106 / DEFAULT_WIDTH) * width, 53)"
-        />
-      </span>
     </h3>
     <div class="subtitle">
       <p>Красноказарменная 19</p>
     </div>
-    <BaseButton variant="big" style="margin-top: 30px"
+    <BaseButton variant="big" style="margin-top: 10px"
       >Открыть в Яндексе</BaseButton
     >
     <div class="cta__images">
@@ -26,8 +27,8 @@
         <img
           src="/images/cta-volain@2x.png"
           alt="Volain"
-          :width="Math.max((171 / DEFAULT_WIDTH) * width, 85)"
-          :height="Math.max((171 / DEFAULT_WIDTH) * width, 85)"
+          :width="Math.min(Math.max((171 / DEFAULT_WIDTH) * width, 85), 171)"
+          :height="Math.min(Math.max((171 / DEFAULT_WIDTH) * width, 85), 171)"
         />
       </motion.div>
     </div>
@@ -87,9 +88,11 @@ h3 {
 }
 
 .point-wrapper {
+  width: 2px;
+  height: 2px;
   position: absolute;
   top: -3vw;
-  left: -3vw;
+  left: -2.8vw;
 }
 
 .cta__images {
@@ -97,7 +100,8 @@ h3 {
   width: 765px;
   height: 375px;
   margin-top: 75px;
-  background-color: #777;
+  border-radius: 45px;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .volain-wrapper {

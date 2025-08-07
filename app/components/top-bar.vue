@@ -67,7 +67,7 @@ const { width } = useScreenWidth();
   transform: translateX(-50%);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   *:not(.topbar-wrapper, .logo-wrapper, img) {
     display: none;
   }

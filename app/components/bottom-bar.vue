@@ -56,7 +56,7 @@ const { width } = useScreenWidth();
   top: 5px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .botbar-wrapper {
     display: none;
   }

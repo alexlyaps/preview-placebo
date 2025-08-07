@@ -151,4 +151,10 @@ const variantClass = `btn--${props.variant || "small"}`;
     color: $light-gray;
   }
 }
+
+@media (max-width: 400px) {
+  .btn--text {
+    font-size: 12px;
+  }
+}
 </style>

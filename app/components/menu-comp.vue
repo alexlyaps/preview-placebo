@@ -6,8 +6,16 @@
         ><img
           src="/images/menu-bear@2x.png"
           alt="Haribo Bear"
-          :width="Math.max((89 / DEFAULT_WIDTH) * width, 40)"
-          :height="Math.max((119 / DEFAULT_WIDTH) * width, 55)"
+          :width="
+            width > 400
+              ? Math.min(Math.max((89 / DEFAULT_WIDTH) * width, 40), 40)
+              : 30
+          "
+          :height="
+            width > 400
+              ? Math.min(Math.max((119 / DEFAULT_WIDTH) * width, 55), 55)
+              : 42
+          "
         /> </span
       >for <br />
       everyone
@@ -20,29 +28,22 @@
       <div class="menu-image" v-for="i in 20" :key="i"></div>
     </div>
     <div class="menu__decoration">
-      <motion.div
-        class="angel-wrapper"
-        :style="{ translateX: width > 500 ? angelTranslateX : '0' }"
-      >
+      <div class="angel-wrapper">
         <img
           src="/images/menu-angel@2x.png"
           alt="Angel"
           :width="Math.max((369 / DEFAULT_WIDTH) * width, 160)"
           :height="Math.max((215 / DEFAULT_WIDTH) * width, 100)"
         />
-      </motion.div>
-      <motion.div
-        class="plate-wrapper"
-        :style="{ translateX: width > 500 ? plateTranslateX : '0' }"
-      >
-        <motion.img
+      </div>
+      <div class="plate-wrapper">
+        <img
           src="/images/menu-plate@2x.png"
           alt="Angel"
           :width="Math.max((215 / DEFAULT_WIDTH) * width, 100)"
           :height="Math.max((215 / DEFAULT_WIDTH) * width, 100)"
-          :style="{ rotateZ }"
         />
-      </motion.div>
+      </div>
     </div>
     <div class="link-wrapper">
       Share with <a href="" target="_blank">@sbstnc</a>
@@ -58,25 +59,25 @@ import { useScreenWidth } from "~/composables/useScreenWidth";
 const { width } = useScreenWidth();
 const DEFAULT_WIDTH = 1920;
 
-const smoothScrollProgress = useSpring(scrollYProgress, {
-  stiffness: 100,
-  damping: 30,
-  restDelta: 0.001,
-});
+// const smoothScrollProgress = useSpring(scrollYProgress, {
+//   stiffness: 100,
+//   damping: 30,
+//   restDelta: 0.001,
+// });
 
-// Используем плавный прогресс для трансформации
-const angelTranslateX = useTransform(
-  smoothScrollProgress,
-  [0.5, 0.8],
-  [-500, 300]
-);
+// // Используем плавный прогресс для трансформации
+// const angelTranslateX = useTransform(
+//   smoothScrollProgress,
+//   [0.5, 0.8],
+//   [-500, 300]
+// );
 
-const plateTranslateX = useTransform(
-  smoothScrollProgress,
-  [0.5, 0.8],
-  [500, -300]
-);
-const rotateZ = useTransform(smoothScrollProgress, [0.5, 0.8], [900, 500]);
+// const plateTranslateX = useTransform(
+//   smoothScrollProgress,
+//   [0.5, 0.8],
+//   [500, -300]
+// );
+// const rotateZ = useTransform(smoothScrollProgress, [0.5, 0.8], [900, 500]);
 </script>
 
 <style scoped lang="scss">
@@ -103,14 +104,14 @@ const rotateZ = useTransform(smoothScrollProgress, [0.5, 0.8], [900, 500]);
 
   .angel-wrapper {
     position: absolute;
-    right: 25%;
+    right: 13vw;
     top: -6.25vw;
   }
 
   .plate-wrapper {
     position: absolute;
+    left: 18.6vw;
     bottom: -5.5vw;
-    left: 30%;
   }
 }
 

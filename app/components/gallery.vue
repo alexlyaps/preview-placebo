@@ -6,8 +6,16 @@
         ><img
           src="/images/gallery-vinyl@2x.png"
           alt="Vinyl"
-          :width="Math.max((90 / DEFAULT_WIDTH) * width, 45)"
-          :height="Math.max((90 / DEFAULT_WIDTH) * width, 45)"
+          :width="
+            width > 400
+              ? Math.min(Math.max((90 / DEFAULT_WIDTH) * width, 42), 90)
+              : 35
+          "
+          :height="
+            width > 400
+              ? Math.min(Math.max((90 / DEFAULT_WIDTH) * width, 42), 90)
+              : 35
+          "
         /> </span
       >, spaces that <br />shine
     </h3>
@@ -28,7 +36,7 @@
         v-for="height in heights"
         :key="height"
         :style="`height: ${
-          width > 500 ? (height / DEFAULT_WIDTH) * width : height * 0.75
+          width > 1100 ? (height / DEFAULT_WIDTH) * width : height * 0.75
         }px`"
       ></div>
       <motion.div class="icecream-wrapper" :style="{ translateX }">
@@ -100,10 +108,23 @@ const heights = [470, 444, 528, 739, 738, 602, 880];
   bottom: -5vw;
 }
 
+@media (max-width: 1100px) {
+  .gallery__images {
+    height: auto;
+    align-items: center;
+  }
+
+  .gallery__image {
+    width: 402px !important;
+
+    border-radius: 19px;
+    background-color: rgba(0, 0, 0, 0.46);
+  }
+}
+
 @media (max-width: 500px) {
   .gallery {
     margin-top: 200px;
-    padding: 20px;
     height: auto;
   }
 
@@ -116,8 +137,7 @@ const heights = [470, 444, 528, 739, 738, 602, 880];
     height: auto;
 
     .gallery__image {
-      width: 100%;
-
+      width: 100% !important;
       border-radius: 19px;
       background-color: rgba(0, 0, 0, 0.46);
     }
