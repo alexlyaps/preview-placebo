@@ -7,8 +7,8 @@
         ><img
           src="/images/cta-point@2x.png"
           alt="Pointer"
-          width="88"
-          height="106"
+          :width="Math.max((88 / DEFAULT_WIDTH) * width, 44)"
+          :height="Math.max((106 / DEFAULT_WIDTH) * width, 53)"
         />
       </span>
     </h3>
@@ -25,9 +25,9 @@
       >
         <img
           src="/images/cta-volain@2x.png"
-          alt="Angel"
-          width="171"
-          height="171"
+          alt="Volain"
+          :width="Math.max((171 / DEFAULT_WIDTH) * width, 85)"
+          :height="Math.max((171 / DEFAULT_WIDTH) * width, 85)"
         />
       </motion.div>
     </div>
@@ -53,6 +53,11 @@
 
 <script setup lang="ts">
 import { motion, useScroll } from "motion-v";
+import { useScreenWidth } from "~/composables/useScreenWidth";
+
+const { width } = useScreenWidth();
+const DEFAULT_WIDTH = 1920;
+
 const { scrollYProgress } = useScroll();
 // Добавляем плавность к scrollYProgress с помощью useSpring
 const smoothScrollProgress = useSpring(scrollYProgress, {
@@ -74,17 +79,17 @@ const translateY = useTransform(smoothScrollProgress, [0.6, 1], [500, -300]);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 15.6vw;
 }
 
 h3 {
-  margin-top: 300px;
   position: relative;
 }
 
 .point-wrapper {
   position: absolute;
-  top: -60px;
-  left: -55px;
+  top: -3vw;
+  left: -3vw;
 }
 
 .cta__images {
@@ -111,5 +116,17 @@ h3 {
 .whatsapp-icon {
   cursor: pointer;
   margin-top: 30px;
+}
+
+@media (max-width: 500px) {
+  .cta {
+    margin-top: -100px;
+  }
+
+  .point-wrapper {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+  }
 }
 </style>

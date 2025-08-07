@@ -5,9 +5,9 @@
       <span class="ball-wrapper"
         ><img
           src="/images/footer-ball@2x.png"
-          alt="Haribo Bear"
-          width="128"
-          height="128"
+          alt="Ball"
+          :width="Math.max((128 / DEFAULT_WIDTH) * width, 64)"
+          :height="Math.max((128 / DEFAULT_WIDTH) * width, 64)"
         /> </span
       >more <br />
       thing
@@ -17,19 +17,26 @@
   </section>
 </template>
 
+<script setup lang="ts">
+import { useScreenWidth } from "~/composables/useScreenWidth";
+
+const { width } = useScreenWidth();
+const DEFAULT_WIDTH = 1920;
+</script>
+
 <style scoped lang="scss">
 .footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 470px;
-  margin-top: 260px;
+  margin-bottom: 25vw;
+  margin-top: 7vw;
 }
 
 .ball-wrapper {
   position: relative;
-  margin-left: -35px;
+  margin-left: -2vw;
   bottom: -20px;
 }
 
@@ -37,5 +44,17 @@
   width: 864px;
   height: 245px;
   background-color: #777;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    margin-top: 100px;
+  }
+
+  .ball-wrapper {
+    position: relative;
+    margin-left: -2vw;
+    bottom: -10px;
+  }
 }
 </style>

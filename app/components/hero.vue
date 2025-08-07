@@ -19,15 +19,19 @@
         <motion.img
           src="/images/hero-ball@2x.png"
           alt="Ball"
-          width="90"
-          height="90"
+          :width="Math.max((90 / 1920) * width, 49)"
+          :height="Math.max((90 / 1920) * width, 49)"
           :style="{ rotateZ }"
         />
       </div>
     </motion.div>
 
     <div class="hero__circled-text">
-      <svg viewBox="0 0 200 200" width="200" height="200">
+      <svg
+        viewBox="0 0 200 200"
+        :width="Math.max(width * 0.1, 100)"
+        :height="Math.max(width * 0.1, 100)"
+      >
         <defs>
           <!-- путь против часовой -->
           <path id="circleBottomReverse" d="M20,110 A90,70 0 0,0 170,20" />
@@ -47,7 +51,10 @@
 </template>
 
 <script setup lang="ts">
+import { useScreenWidth } from "~/composables/useScreenWidth";
 import { motion, useScroll } from "motion-v";
+
+const DEFAULT_WIDTH = 1920;
 const { scrollYProgress } = useScroll();
 // Добавляем плавность к scrollYProgress с помощью useSpring
 const smoothScrollProgress = useSpring(scrollYProgress, {
@@ -57,26 +64,35 @@ const smoothScrollProgress = useSpring(scrollYProgress, {
 });
 
 // Используем плавный прогресс для трансформации
-const translateY = useTransform(smoothScrollProgress, [0, 0.1], [-500, -300]);
+const translateY = useTransform(smoothScrollProgress, [0, 0.1], [-1000, -800]);
 const rotateZ = useTransform(smoothScrollProgress, [0, 0.1], [-500, -300]);
+
+const { width } = useScreenWidth();
 </script>
 
 <style scoped lang="scss">
 .hero {
   position: relative;
-  height: 800px;
-  width: 700px;
+  height: auto;
+  max-width: clamp(450px, 36.5vw, 690px);
+  max-height: clamp(400px, 46.5vw, 700px);
+  width: 100%;
   padding: 20px;
   margin: 0 auto;
   margin-top: 183px;
 }
 
 .hero__image-wrapper {
-  position: absolute;
-  top: 250px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  width: clamp(350px, 34vw, 614px);
+  margin: -5.2vw auto 0 auto;
   z-index: -1;
+
+  & img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
 .hero__ball-wrapper {
@@ -88,11 +104,11 @@ const rotateZ = useTransform(smoothScrollProgress, [0, 0.1], [-500, -300]);
 
 .hero__circled-text {
   position: absolute;
-  top: 100px; // подгони по макету
-  right: -120px;
+  top: 6vw; // подгони по макету
+  right: -5.25vw;
   transform: translateX(-50%);
-  width: 200px;
-  height: 200px;
+  width: 10vw;
+  height: auto;
 }
 
 .hero__circled-text--text {
@@ -100,5 +116,25 @@ const rotateZ = useTransform(smoothScrollProgress, [0, 0.1], [-500, -300]);
   letter-spacing: 2px;
   fill: black; // не color, а fill!
   z-index: -1;
+}
+
+@media (max-width: 500px) {
+  .hero {
+    margin-top: 110px;
+  }
+
+  .hero__image-wrapper {
+    top: -65px;
+    margin: 0 auto;
+    z-index: -1;
+  }
+
+  .hero__circled-text {
+    top: 100px;
+    right: 50px;
+    // transform: translateX(-50%);
+    width: 10vw;
+    height: auto;
+  }
 }
 </style>

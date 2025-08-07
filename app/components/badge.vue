@@ -9,11 +9,11 @@
 <style scoped lang="scss">
 // базовый стиль
 .badge {
-  height: 38px;
+  height: clamp(18px, 2vw, 38px);
   border-radius: 19px;
+  font-size: clamp(10px, 0.8vw, 18px);
   background-color: rgba(255, 255, 255, 1);
   color: rgba(120, 88, 88, 1);
-  font-size: 16px;
   font-weight: 500;
   display: flex;
   justify-content: center;

@@ -33,13 +33,11 @@ const variantClass = `btn--${props.variant || "small"}`;
 
 // варианты
 .btn--big {
-  background-color: #ffffff;
-  height: 73px;
-  width: 274px;
-  // padding: 18px 57px;
-  font-size: 22px;
+  height: clamp(60px, 3.8vw, 73px);
+  width: clamp(200px, 14.3vw, 274px);
+  font-size: clamp(16px, 1.15vw, 22px);
+  border-radius: clamp(14px, 1.15vw, 22px);
   color: rgba(255, 255, 255, 1);
-  border-radius: 22px;
   background-color: rgba(151, 0, 0, 1);
 
   &:hover {
@@ -56,10 +54,10 @@ const variantClass = `btn--${props.variant || "small"}`;
 }
 
 .btn--big-blue {
-  height: 73px;
-  width: 274px;
-  border-radius: 22px;
-  font-size: 22px;
+  height: clamp(60px, 3.8vw, 73px);
+  width: clamp(200px, 14.3vw, 274px);
+  font-size: clamp(16px, 1.15vw, 22px);
+  border-radius: clamp(14px, 1.15vw, 22px);
   margin-top: 30px;
   background-color: #292f6e;
   color: rgba(255, 255, 255, 1);
@@ -127,11 +125,11 @@ const variantClass = `btn--${props.variant || "small"}`;
 }
 
 .btn--rounded {
-  height: 38px;
+  height: clamp(18px, 2vw, 38px);
   border-radius: 19px;
   background-color: rgba(132, 48, 48, 1);
   color: #fff;
-  font-size: 16px;
+  font-size: clamp(8px, 0.8vw, 16px);
   font-weight: 500;
   padding: auto;
 
@@ -141,10 +139,10 @@ const variantClass = `btn--${props.variant || "small"}`;
 }
 
 .btn--text {
-  color: #fff;
+  color: #000;
   border: none;
   background-color: transparent;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   padding: 0;
   transition: all 0.3s ease-in-out;

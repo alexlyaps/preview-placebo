@@ -8,6 +8,7 @@
     <Cta />
   </main>
   <FooterComp />
+  <BottomBar />
 </template>
 
 <script setup lang="ts"></script>
