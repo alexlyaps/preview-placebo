@@ -20,6 +20,30 @@
       >Открыть в Яндексе</BaseButton
     >
     <div class="cta__images">
+      <div style="position: relative; overflow: hidden">
+        <a
+          href="https://yandex.com/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+          style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+          >Москва</a
+        ><a
+          href="https://yandex.com/maps/213/moscow/house/krasnokazarmennaya_ulitsa_19/Z04YcQZgSUwHQFtvfXt0cnVqYQ==/?ll=37.710090%2C55.753995&utm_medium=mapframe&utm_source=maps&z=17.11"
+          style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+          >Красноказарменная улица, 19 — Яндекс Карты</a
+        ><iframe
+          src="https://yandex.com/map-widget/v1/?ll=37.710090%2C55.753995&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxNDMwMxJN0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCa0YDQsNGB0L3QvtC60LDQt9Cw0YDQvNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkiCg0j1xZCFRgEX0I%2C&z=17.11"
+          width="765"
+          height="375"
+          frameborder="1"
+          allowfullscreen="true"
+          allow="encrypted-media"
+          style="
+            position: relative;
+            border-radius: 35px;
+            border: none;
+            outline: none;
+          "
+        ></iframe>
+      </div>
       <motion.div
         class="volain-wrapper"
         :style="{ rotateZ, translateX, translateY }"
@@ -71,7 +95,7 @@ const smoothScrollProgress = useSpring(scrollYProgress, {
 
 const rotateZ = useTransform(smoothScrollProgress, [0.6, 1], [500, -300]);
 const translateX = useTransform(smoothScrollProgress, [0.6, 1], [500, -300]);
-const translateY = useTransform(smoothScrollProgress, [0.6, 1], [500, -300]);
+const translateY = useTransform(smoothScrollProgress, [0.6, 1], [500, 100]);
 </script>
 
 <style scoped lang="scss">
@@ -97,7 +121,8 @@ h3 {
 
 .cta__images {
   position: relative;
-  width: 765px;
+  max-width: 765px;
+  width: 90%;
   height: 375px;
   margin-top: 75px;
   border-radius: 45px;

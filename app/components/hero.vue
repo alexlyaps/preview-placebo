@@ -81,12 +81,10 @@ const rotateZ = useTransform(
 
 <style scoped lang="scss">
 .hero {
-  position: relative;
   height: auto;
   max-width: clamp(350px, 46.5vw, 690px);
   max-height: clamp(100px, 46.5vw, 700px);
   width: 100%;
-  padding: 20px;
   margin: 0 auto;
   margin-top: 183px;
   margin-bottom: clamp(300px, 22vw, 400px);

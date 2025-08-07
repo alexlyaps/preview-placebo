@@ -13,7 +13,44 @@
       thing
     </h3>
 
-    <div class="more-wrapper"></div>
+    <div class="more-wrapper">
+      <iframe
+        width="100%"
+        height="245"
+        scrolling="no"
+        frameborder="no"
+        allow="encrypted-media"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/181214130&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+      ></iframe>
+      <div
+        style="
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-weight: 100;
+        "
+      >
+        <a
+          href="https://soundcloud.com/igor-lkid"
+          title="Igor LKid"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Igor LKid</a
+        >
+        ·
+        <a
+          href="https://soundcloud.com/igor-lkid/kettenkarussell-fusion-live"
+          title="Kettenkarussell - Fusion (live)"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Kettenkarussell - Fusion (live)</a
+        >
+      </div>
+    </div>
   </section>
 </template>
 
@@ -36,13 +73,15 @@ const DEFAULT_WIDTH = 1920;
 
 .ball-wrapper {
   position: relative;
-  margin-left: -2vw;
+  margin-left: -1vw;
   bottom: -20px;
 }
 
 .more-wrapper {
-  width: 864px;
+  max-width: 864px;
+  width: 90%;
   height: 245px;
+  margin-top: 3vw;
   background-color: #777;
 }
 
