@@ -147,7 +147,7 @@ const DEFAULT_WIDTH = 1920;
   position: relative;
   top: 2vw;
   left: 25vw;
-  transform: rotateZ(-17deg);
+  transform: rotateZ(-17deg) !important;
 }
 
 @media (max-width: 500px) {

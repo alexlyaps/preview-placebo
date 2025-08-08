@@ -32,8 +32,8 @@
       <img
         src="/images/logo@2x.png"
         alt="Subtance Logo"
-        :width="Math.max((154 / 1920) * width, 104)"
-        :height="Math.max((29 / 1920) * width, 20)"
+        :width="Math.min(Math.max((154 / 1920) * width, 104), 154)"
+        :height="Math.min(Math.max((29 / 1920) * width, 20), 29)"
       />
     </div>
   </div>

@@ -56,6 +56,19 @@
         />
       </motion.div>
     </div>
+    <div class="volain-container">
+      <motion.div
+        class="volain-wrapper"
+        :style="{ rotateZ, translateX, translateY }"
+      >
+        <img
+          src="/images/cta-volain@2x.png"
+          alt="Volain"
+          :width="Math.min(Math.max((171 / DEFAULT_WIDTH) * width, 85), 171)"
+          :height="Math.min(Math.max((171 / DEFAULT_WIDTH) * width, 85), 171)"
+        />
+      </motion.div>
+    </div>
     <div class="subtitle fade-item" style="margin-top: 96px">
       <p>
         Звони, пиши в вотсап или <br />
@@ -128,6 +141,15 @@ h3 {
   border-radius: 45px;
   background-color: rgba(0, 0, 0, 1);
   overflow: hidden;
+}
+
+.volain-container {
+  position: relative;
+  top: -375px;
+  max-width: 765px;
+  margin-bottom: -275px;
+  width: 90%;
+  height: 375px;
 }
 
 .volain-wrapper {

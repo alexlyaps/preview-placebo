@@ -31,51 +31,44 @@
       </p>
     </div>
     <div class="gallery__images">
-      <div
-        class="gallery__image"
-        v-for="height in heightAdaptive"
-        :key="height"
-        :style="`height: ${height}px`"
-      ></div>
-      <div class="icecream-wrapper">
-        <img
-          src="/images/gallery-icecream@2x.png"
-          alt="Icecream"
-          :width="Math.min(Math.max((248 / DEFAULT_WIDTH) * width, 124), 248)"
-          :height="Math.min(Math.max((248 / DEFAULT_WIDTH) * width, 124), 248)"
+      <div class="gallery__column" v-for="(column, i) in heights" :key="i">
+        <div
+          class="gallery__image"
+          v-for="(height, j) in column"
+          :key="j"
+          :style="{
+            height: `${Math.min(
+              Math.max((height / DEFAULT_WIDTH) * width, height / 2),
+              height
+            )}px`,
+          }"
         />
+        <div class="icecream-wrapper" v-if="i === 0">
+          <img
+            src="/images/gallery-icecream@2x.png"
+            alt="Icecream"
+            :width="Math.min(Math.max((248 / DEFAULT_WIDTH) * width, 124), 248)"
+            :height="
+              Math.min(Math.max((248 / DEFAULT_WIDTH) * width, 124), 248)
+            "
+          />
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { motion, useScroll } from "motion-v";
-const { scrollYProgress } = useScroll();
 import { useScreenWidth } from "~/composables/useScreenWidth";
 
 const { width } = useScreenWidth();
-const heights = [470, 444, 528, 739, 738, 602, 880];
-const heightAdaptive = heights.map((height) => {
-  if (width.value > 1920) {
-    return height;
-  } else if (width.value > 1100) {
-    return (height / DEFAULT_WIDTH) * width.value;
-  } else {
-    return height * 0.75;
-  }
-});
-const DEFAULT_WIDTH = 1920;
-// // Добавляем плавность к scrollYProgress с помощью useSpring
-// const smoothScrollProgress = useSpring(scrollYProgress, {
-//   stiffness: 100,
-//   damping: 30,
-//   restDelta: 0.001,
-// });
+const heights = [
+  [470, 444, 528],
+  [739, 738],
+  [602, 880],
+];
 
-// // Используем плавный прогресс для трансформации
-// const translateX = useTransform(smoothScrollProgress, [0.3, 0.6], [0, 1000]);
-// // const rotateZ = useTransform(smoothScrollProgress, [0, 0.1], [-500, -300]);
+const DEFAULT_WIDTH = 1920;
 </script>
 
 <style scoped lang="scss">
@@ -96,13 +89,20 @@ const DEFAULT_WIDTH = 1920;
   position: relative;
   max-width: 1920px;
   width: 100%;
-  height: clamp(200px, 89vw, 1520px);
+  // height: clamp(200px, 89vw, 1580px);
   margin: 0 auto;
   margin-top: 7.5vw;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  gap: clamp(10px, 1.7vw, 25px);
+
+  .gallery__column {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 1.7vw, 25px);
+    height: auto;
+  }
 
   .gallery__image {
     max-width: 602px;
@@ -114,18 +114,19 @@ const DEFAULT_WIDTH = 1920;
 
 .icecream-wrapper {
   position: absolute;
-  bottom: -10vw;
+  bottom: -5vw;
 }
 
 @media (max-width: 1100px) {
   .gallery__images {
+    flex-direction: column;
     height: auto;
     align-items: center;
   }
 
   .gallery__image {
-    width: 402px !important;
-
+    max-width: 402px !important;
+    width: 80vw !important;
     border-radius: 19px;
     background-color: rgba(0, 0, 0, 0.46);
   }
@@ -146,7 +147,7 @@ const DEFAULT_WIDTH = 1920;
     height: auto;
 
     .gallery__image {
-      width: 100% !important;
+      width: 400px !important;
       border-radius: 19px;
       background-color: rgba(0, 0, 0, 0.46);
     }
@@ -154,7 +155,7 @@ const DEFAULT_WIDTH = 1920;
 
   .icecream-wrapper {
     left: 5vw;
-    bottom: -50px;
+    transform: translateX(-50%) !important;
   }
 }
 </style>

@@ -38,18 +38,18 @@
         width="614"
         height="614"
       />
+      <motion.div :style="{ translateY }">
+        <div class="hero__ball-wrapper">
+          <motion.img
+            src="/images/hero-ball@2x.png"
+            alt="Ball"
+            :width="Math.min(Math.max((90 / 1920) * width, 49), 90)"
+            :height="Math.min(Math.max((90 / 1920) * width, 49), 90)"
+            :style="{ rotateZ }"
+          />
+        </div>
+      </motion.div>
     </div>
-    <motion.div :style="{ translateY }">
-      <div class="hero__ball-wrapper">
-        <motion.img
-          src="/images/hero-ball@2x.png"
-          alt="Ball"
-          :width="Math.min(Math.max((90 / 1920) * width, 49), 90)"
-          :height="Math.min(Math.max((90 / 1920) * width, 49), 90)"
-          :style="{ rotateZ }"
-        />
-      </div>
-    </motion.div>
   </section>
 </template>
 
@@ -67,12 +67,12 @@ const smoothScrollProgress = useSpring(scrollYProgress, {
   restDelta: 0.001,
 });
 
-// Используем плавный прогресс для трансформации
-const translateY = useTransform(
-  smoothScrollProgress,
-  [0, 0.15],
-  [width.value > 500 ? -500 : -1140, width.value > 500 ? -800 : -900]
+const translateY = computed(() =>
+  width.value > 500
+    ? useTransform(smoothScrollProgress, [0, 0.15], [-500, -250])
+    : useTransform(smoothScrollProgress, [0, 0.15], [-300, -50])
 );
+
 const rotateZ = useTransform(
   smoothScrollProgress,
   [0, 0.1],
@@ -99,7 +99,7 @@ const rotateZ = useTransform(
   margin-top: clamp(-100px, -5.2vw, 53px);
   z-index: -1;
 
-  & img {
+  & img:where([alt="Hero Image"]) {
     width: 100%;
     height: auto;
     display: block;
@@ -108,7 +108,7 @@ const rotateZ = useTransform(
 
 .hero__ball-wrapper {
   position: absolute;
-  top: 550px;
+  // top: 550px;
   left: 10%;
   transform: translateX(-50%);
 }
