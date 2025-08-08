@@ -76,7 +76,7 @@
       </p>
     </div>
     <BaseButton variant="big-blue" class="fade-item">Бронь</BaseButton>
-    <div class="phone">+7 (968) 907-73-86</div>
+    <p class="phone" style="color: rgba(97, 71, 71, 1)">+7 (968) 907-73-86</p>
     <div class="whatsapp-icon fade-item">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
         <path
