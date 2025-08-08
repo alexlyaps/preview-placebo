@@ -1,18 +1,19 @@
 <template>
   <section class="hero">
-    <h2>
+    <h2 class="fade-item">
       Come for <br />
       the food, sta<span style="position: relative"
         >y
-        <div class="hero__circled-text">
+        <div class="hero__circled-text fade-item">
           <svg
             viewBox="0 0 200 200"
-            :width="Math.min(Math.max(width * 0.1, 120), 200)"
-            :height="Math.min(Math.max(width * 0.1, 120), 200)"
+            :width="Math.min(Math.max(width * 0.1, 105), 190)"
+            :height="Math.min(Math.max(width * 0.1, 105), 190)"
+            style="transform: rotateZ(-60deg)"
           >
             <defs>
               <!-- путь против часовой -->
-              <path id="circleBottomReverse" d="M20,110 A90,70 0 0,0 170,20" />
+              <path id="circleBottomReverse" d="M35,100 A65,65 0 0,0 165,100" />
             </defs>
             <text class="hero__circled-text--text">
               <textPath
@@ -70,7 +71,7 @@ const smoothScrollProgress = useSpring(scrollYProgress, {
 const translateY = useTransform(
   smoothScrollProgress,
   [0, 0.15],
-  [width.value > 500 ? -500 : -1200, width.value > 500 ? -800 : -900]
+  [width.value > 500 ? -500 : -1140, width.value > 500 ? -800 : -900]
 );
 const rotateZ = useTransform(
   smoothScrollProgress,
@@ -115,16 +116,23 @@ const rotateZ = useTransform(
 .hero__circled-text {
   text-transform: none;
   position: absolute;
-  top: clamp(23px, 2vw, 40px);
-  right: clamp(80px, 7vw, 140px);
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
+  // top: clamp(-22px, -1.1vw, 0px);
+  // right: clamp(-37px, -5vw, 0px) !important;
+  top: 0;
+  left: 0;
+  transform: translateX(-200%) !important;
+  font-family: IgraSans;
+  width: 10px !important;
+  height: 10px !important;
+
+  // & svg {
+  //   position: relative;
+  //   left: -1;
+  // }
 }
 
 .hero__circled-text--text {
-  font-size: 14px;
-
+  font-size: 13px;
   letter-spacing: 2px;
   fill: black; // не color, а fill!
   z-index: -1;
@@ -145,9 +153,9 @@ const rotateZ = useTransform(
   }
 
   .hero__circled-text {
-    top: 10px;
-    right: 30px;
-    // transform: translateX(-50%);
+    top: -10px !important;
+    // right: 20px !important;
+    transform: translateX(-300%) !important;
     width: 10vw;
     height: auto;
   }
@@ -159,13 +167,13 @@ const rotateZ = useTransform(
     margin: 0 auto;
     z-index: -1;
   }
+}
 
-  .hero__circled-text {
-    top: -10px;
-    right: 30px;
-    // transform: translateX(-50%);
-    width: 10vw;
-    height: auto;
-  }
+.hero__circled-text {
+  top: -15px;
+  right: 15px;
+  // transform: translateX(-50%);
+  width: 10vw;
+  height: auto;
 }
 </style>

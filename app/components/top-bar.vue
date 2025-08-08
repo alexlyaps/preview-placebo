@@ -6,12 +6,16 @@
     </div>
 
     <div class="badges">
-      <Badge style="margin-right: 12px; cursor: pointer">
+      <Badge
+        :style="`margin-right: 12px; cursor: pointer; padding: ${
+          (9 / 1920) * width
+        }px`"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 23 23"
-          :width="(24 / 1920) * width"
-          :height="(24 / 1920) * width"
+          :width="(20 / 1920) * width"
+          :height="(20 / 1920) * width"
         >
           <path
             fill="#3F7D48"

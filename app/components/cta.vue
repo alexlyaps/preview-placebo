@@ -1,6 +1,6 @@
 <template>
   <section class="cta">
-    <h3>
+    <h3 class="fade-item">
       <span style="position: relative"
         ><span class="point-wrapper"
           ><img
@@ -13,10 +13,10 @@
       >eeting <br />
       point
     </h3>
-    <div class="subtitle">
+    <div class="subtitle fade-item">
       <p>Красноказарменная 19</p>
     </div>
-    <BaseButton variant="big" style="margin-top: 10px"
+    <BaseButton variant="big" style="margin-top: 10px" class="fade-item"
       >Открыть в Яндексе</BaseButton
     >
     <div class="cta__images">
@@ -56,15 +56,15 @@
         />
       </motion.div>
     </div>
-    <div class="subtitle" style="margin-top: 96px">
+    <div class="subtitle fade-item" style="margin-top: 96px">
       <p>
         Звони, пиши в вотсап или <br />
         бронируй по кнопке
       </p>
     </div>
-    <BaseButton variant="big-blue">Бронь</BaseButton>
+    <BaseButton variant="big-blue" class="fade-item">Бронь</BaseButton>
     <div class="phone">+ 7 926 000-22-00</div>
-    <div class="whatsapp-icon">
+    <div class="whatsapp-icon fade-item">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
         <path
           fill="#3F7D48"
@@ -127,6 +127,7 @@ h3 {
   margin-top: 75px;
   border-radius: 45px;
   background-color: rgba(0, 0, 0, 1);
+  overflow: hidden;
 }
 
 .volain-wrapper {
@@ -149,7 +150,7 @@ h3 {
 
 @media (max-width: 500px) {
   .cta {
-    margin-top: -100px;
+    margin-top: 100px;
   }
 
   .point-wrapper {

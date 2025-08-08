@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 8px;
+  padding: 0 15px;
 }
 
 @media (max-width: 500px) {

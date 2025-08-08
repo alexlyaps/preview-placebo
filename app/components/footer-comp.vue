@@ -1,19 +1,19 @@
 <template>
   <section class="footer">
-    <h3>
+    <h3 class="fade-item">
       one
       <span class="ball-wrapper"
         ><img
           src="/images/footer-ball@2x.png"
           alt="Ball"
-          :width="Math.max((128 / DEFAULT_WIDTH) * width, 64)"
-          :height="Math.max((128 / DEFAULT_WIDTH) * width, 64)"
+          :width="Math.min(Math.max((120 / DEFAULT_WIDTH) * width, 64), 120)"
+          :height="Math.min(Math.max((120 / DEFAULT_WIDTH) * width, 64), 120)"
         /> </span
       >more <br />
       thing
     </h3>
 
-    <div class="more-wrapper">
+    <div class="more-wrapper fade-item">
       <iframe
         width="100%"
         height="245"

@@ -1,6 +1,6 @@
 <template>
   <section class="gallery">
-    <h3>
+    <h3 class="fade-item">
       Flavors that <br />sing
       <span class="vinyl-wrapper"
         ><img
@@ -19,7 +19,7 @@
         /> </span
       >, spaces that <br />shine
     </h3>
-    <div class="subtitle">
+    <div class="subtitle fade-item">
       <p>
         Мы объединили простую еду, хорошую музыку<br />
         и минималистичный интерьер.
@@ -33,20 +33,18 @@
     <div class="gallery__images">
       <div
         class="gallery__image"
-        v-for="height in heights"
+        v-for="height in heightAdaptive"
         :key="height"
-        :style="`height: ${
-          width > 1100 ? (height / DEFAULT_WIDTH) * width : height * 0.75
-        }px`"
+        :style="`height: ${height}px`"
       ></div>
-      <motion.div class="icecream-wrapper" :style="{ translateX }">
+      <div class="icecream-wrapper">
         <img
           src="/images/gallery-icecream@2x.png"
           alt="Icecream"
-          :width="(248 / DEFAULT_WIDTH) * width"
-          :height="(248 / DEFAULT_WIDTH) * width"
+          :width="Math.min(Math.max((248 / DEFAULT_WIDTH) * width, 124), 248)"
+          :height="Math.min(Math.max((248 / DEFAULT_WIDTH) * width, 124), 248)"
         />
-      </motion.div>
+      </div>
     </div>
   </section>
 </template>
@@ -57,19 +55,27 @@ const { scrollYProgress } = useScroll();
 import { useScreenWidth } from "~/composables/useScreenWidth";
 
 const { width } = useScreenWidth();
-const DEFAULT_WIDTH = 1920;
-// Добавляем плавность к scrollYProgress с помощью useSpring
-const smoothScrollProgress = useSpring(scrollYProgress, {
-  stiffness: 100,
-  damping: 30,
-  restDelta: 0.001,
-});
-
-// Используем плавный прогресс для трансформации
-const translateX = useTransform(smoothScrollProgress, [0.3, 0.6], [0, 1000]);
-// const rotateZ = useTransform(smoothScrollProgress, [0, 0.1], [-500, -300]);
-
 const heights = [470, 444, 528, 739, 738, 602, 880];
+const heightAdaptive = heights.map((height) => {
+  if (width.value > 1920) {
+    return height;
+  } else if (width.value > 1100) {
+    return (height / DEFAULT_WIDTH) * width.value;
+  } else {
+    return height * 0.75;
+  }
+});
+const DEFAULT_WIDTH = 1920;
+// // Добавляем плавность к scrollYProgress с помощью useSpring
+// const smoothScrollProgress = useSpring(scrollYProgress, {
+//   stiffness: 100,
+//   damping: 30,
+//   restDelta: 0.001,
+// });
+
+// // Используем плавный прогресс для трансформации
+// const translateX = useTransform(smoothScrollProgress, [0.3, 0.6], [0, 1000]);
+// // const rotateZ = useTransform(smoothScrollProgress, [0, 0.1], [-500, -300]);
 </script>
 
 <style scoped lang="scss">
@@ -88,16 +94,19 @@ const heights = [470, 444, 528, 739, 738, 602, 880];
 
 .gallery__images {
   position: relative;
+  max-width: 1920px;
   width: 100%;
-  height: clamp(200px, 79vw, 1520px);
+  height: clamp(200px, 89vw, 1520px);
+  margin: 0 auto;
   margin-top: 7.5vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 1.7vw;
+  gap: 20px;
 
   .gallery__image {
-    width: 31vw;
+    max-width: 602px;
+    width: 30vw;
     border-radius: 19px;
     background-color: rgba(0, 0, 0, 0.46);
   }
@@ -105,7 +114,7 @@ const heights = [470, 444, 528, 739, 738, 602, 880];
 
 .icecream-wrapper {
   position: absolute;
-  bottom: -5vw;
+  bottom: -10vw;
 }
 
 @media (max-width: 1100px) {
@@ -124,7 +133,7 @@ const heights = [470, 444, 528, 739, 738, 602, 880];
 
 @media (max-width: 500px) {
   .gallery {
-    margin-top: 200px;
+    margin-top: 100px;
     height: auto;
   }
 
@@ -141,6 +150,11 @@ const heights = [470, 444, 528, 739, 738, 602, 880];
       border-radius: 19px;
       background-color: rgba(0, 0, 0, 0.46);
     }
+  }
+
+  .icecream-wrapper {
+    left: 5vw;
+    bottom: -50px;
   }
 }
 </style>

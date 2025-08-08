@@ -1,6 +1,6 @@
 <template>
   <section class="menu">
-    <h3>
+    <h3 class="fade-item">
       something
       <span class="bear-wrapper"
         ><img
@@ -20,15 +20,17 @@
       >for <br />
       everyone
     </h3>
-    <div class="subtitle">
+    <div class="subtitle fade-item">
       <p>Еда, какой мы себе ее <br />представляем</p>
     </div>
-    <BaseButton variant="big" style="margin-top: 64px">Меню</BaseButton>
-    <div class="menu__images">
+    <BaseButton variant="big" style="margin-top: 64px" class="fade-item"
+      >Меню</BaseButton
+    >
+    <div class="menu__images fade-item">
       <div class="menu-image" v-for="i in 20" :key="i"></div>
     </div>
     <div class="menu__decoration">
-      <div class="angel-wrapper">
+      <div class="angel-wrapper fade-item">
         <img
           src="/images/menu-angel@2x.png"
           alt="Angel"
@@ -36,7 +38,7 @@
           :height="Math.max((215 / DEFAULT_WIDTH) * width, 100)"
         />
       </div>
-      <div class="plate-wrapper">
+      <div class="plate-wrapper fade-item">
         <img
           src="/images/menu-plate@2x.png"
           alt="Angel"
@@ -45,7 +47,7 @@
         />
       </div>
     </div>
-    <div class="link-wrapper">
+    <div class="link-wrapper fade-item">
       Share with <a href="" target="_blank">@sbstnc</a>
     </div>
   </section>
@@ -151,16 +153,16 @@ const DEFAULT_WIDTH = 1920;
 @media (max-width: 500px) {
   .menu__images {
     position: relative;
-    height: 400px;
-    width: calc(400px * 20);
+    height: 200px;
+    width: calc(200px * 20);
     margin-top: 130px;
     display: flex;
     gap: 1.45vw;
     animation: scroll 80s linear infinite;
 
     .menu-image {
-      height: 400px;
-      width: 400px;
+      height: 100%;
+      width: 200px;
       border-radius: 23px;
       background-color: #777;
     }
@@ -168,9 +170,9 @@ const DEFAULT_WIDTH = 1920;
 
   .menu__decoration {
     position: relative;
-    height: 400px;
+    height: 200px;
     width: 90vw;
-    top: -400px;
+    top: -200px;
     margin-bottom: -19vw;
 
     .angel-wrapper {
@@ -187,7 +189,7 @@ const DEFAULT_WIDTH = 1920;
   }
 
   .link-wrapper {
-    top: -250px;
+    top: -70px;
     left: 25vw;
     transform: rotateZ(-17deg);
   }
