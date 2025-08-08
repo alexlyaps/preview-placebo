@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     head: {
       title: "Alma",
       meta: [
+        { name: "format-detection", content: "telephone=no" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "description", content: "Substance" },
         { name: "apple-mobile-web-app-title", content: "Substance" },

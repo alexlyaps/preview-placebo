@@ -161,8 +161,9 @@ h3 {
 }
 
 .phone {
-  // font-size: 16px;
-  // color: rgba(120, 88, 88, 1);
+  color: rgba(97, 71, 71, 1) !important;
+  -webkit-phone-number-detection: none;
+  text-decoration: none !important;
   margin-top: 30px;
 }
 
