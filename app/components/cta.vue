@@ -76,7 +76,7 @@
       </p>
     </div>
     <BaseButton variant="big-blue" class="fade-item">Бронь</BaseButton>
-    <div class="phone">+ 7 926 000-22-00</div>
+    <div class="phone">+7 (968) 907-73-86</div>
     <div class="whatsapp-icon fade-item">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
         <path
@@ -161,8 +161,8 @@ h3 {
 }
 
 .phone {
-  font-size: 16px;
-  color: rgba(120, 88, 88, 1);
+  // font-size: 16px;
+  // color: rgba(120, 88, 88, 1);
   margin-top: 30px;
 }
 
