@@ -1,5 +1,5 @@
 <template>
-  <section class="gallery">
+  <section class="gallery" id="interier">
     <h3 class="fade-item">
       Flavors that <br />sing
       <span class="vinyl-wrapper"

@@ -1,8 +1,10 @@
 <template>
   <div class="topbar-wrapper">
     <div class="buttons">
-      <BaseButton variant="rounded">Меню</BaseButton>
-      <BaseButton variant="rounded">Интерьер</BaseButton>
+      <a href="#menu"><BaseButton variant="rounded">Меню</BaseButton></a>
+      <a href="#interier"
+        ><BaseButton variant="rounded">Интерьер</BaseButton></a
+      >
     </div>
 
     <div class="badges">
@@ -25,7 +27,7 @@
         </svg>
       </Badge>
 
-      <Badge>+ 7 926 000-22-00</Badge>
+      <Badge>+7 (968) 907-73-86</Badge>
       <Badge>Красноказарменная 19 </Badge>
     </div>
     <div class="logo-wrapper">

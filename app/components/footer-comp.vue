@@ -67,7 +67,7 @@ const DEFAULT_WIDTH = 1920;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 25vw;
+  margin-bottom: 12.5vw;
   margin-top: 7vw;
 }
 
@@ -88,6 +88,7 @@ const DEFAULT_WIDTH = 1920;
 @media (max-width: 500px) {
   .footer {
     margin-top: 100px;
+    margin-bottom: 200px;
   }
 
   .ball-wrapper {

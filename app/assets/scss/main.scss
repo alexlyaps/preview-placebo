@@ -23,6 +23,7 @@ html {
   font-size: clamp(14px, 1vw, 20px);
   line-height: clamp(18px, 1.4vw, 28px);
   max-width: 100vw;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -64,7 +65,9 @@ li {
 }
 
 a {
-  color: #e37a56;
+  width: 100%;
+  height: 100%;
+  color: white;
   background-color: transparent;
   border: none;
   text-decoration: none;

@@ -1,5 +1,5 @@
 <template>
-  <section class="menu">
+  <section class="menu" id="menu">
     <h3 class="fade-item">
       something
       <span class="bear-wrapper"
@@ -8,12 +8,12 @@
           alt="Haribo Bear"
           :width="
             width > 400
-              ? Math.min(Math.max((89 / DEFAULT_WIDTH) * width, 40), 40)
+              ? Math.min(Math.max((89 / DEFAULT_WIDTH) * width, 40), 89)
               : 30
           "
           :height="
             width > 400
-              ? Math.min(Math.max((119 / DEFAULT_WIDTH) * width, 55), 55)
+              ? Math.min(Math.max((119 / DEFAULT_WIDTH) * width, 55), 119)
               : 42
           "
         /> </span
@@ -48,7 +48,7 @@
       </div>
     </div>
     <div class="link-wrapper fade-item">
-      Share with <a href="" target="_blank">@sbstnc</a>
+      Share with <a href="" target="_blank" style="color: #e37a56">@sbstnc</a>
     </div>
   </section>
 </template>

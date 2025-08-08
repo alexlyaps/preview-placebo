@@ -1,8 +1,8 @@
 <template>
   <div class="botbar-wrapper">
     <div class="buttons">
-      <BaseButton variant="text">Меню</BaseButton>
-      <BaseButton variant="text">Интерьер</BaseButton>
+      <a href="#menu"><BaseButton variant="text">Меню</BaseButton></a>
+      <a href="#interier"><BaseButton variant="text">Интерьер</BaseButton></a>
     </div>
     <div class="contacts">
       <BaseButton variant="text">+7 (968) 907-73-86</BaseButton>
