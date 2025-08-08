@@ -31,7 +31,7 @@
           >Красноказарменная улица, 19 — Яндекс Карты</a
         ><iframe
           src="https://yandex.com/map-widget/v1/?ll=37.710090%2C55.753995&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxNDMwMxJN0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCa0YDQsNGB0L3QvtC60LDQt9Cw0YDQvNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkiCg0j1xZCFRgEX0I%2C&z=17.11"
-          width="765"
+          :width="width > 500 ? 765 : '100%'"
           height="375"
           frameborder="1"
           allowfullscreen="true"
@@ -157,6 +157,7 @@ h3 {
   position: absolute;
   right: -80px;
   bottom: 13%;
+  z-index: 1;
 }
 
 .phone {
@@ -179,6 +180,10 @@ h3 {
     position: absolute;
     top: -30px;
     left: -30px;
+  }
+
+  .subtitle {
+    margin-top: 0px !important;
   }
 }
 </style>

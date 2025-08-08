@@ -7,7 +7,12 @@
     <div class="contacts">
       <BaseButton variant="text">+7 (968) 907-73-86</BaseButton>
       <div class="whatsapp-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+        >
           <path
             fill="#3F7D48"
             transform="translate(0 3.8147e-05)"
@@ -53,11 +58,11 @@ const { width } = useScreenWidth();
 
 .whatsapp-icon {
   position: relative;
-  top: 5px;
+  top: 6px;
 }
 
 @media (min-width: 768px) {
-  .botbar-wrapper {
+  *:not(.topbar-wrapper):not(.logo-wrapper) {
     display: none;
   }
 }

@@ -1,13 +1,13 @@
 <template>
   <div class="topbar-wrapper">
-    <div class="buttons">
+    <div class="buttons desk">
       <a href="#menu"><BaseButton variant="rounded">Меню</BaseButton></a>
       <a href="#interier"
         ><BaseButton variant="rounded">Интерьер</BaseButton></a
       >
     </div>
 
-    <div class="badges">
+    <div class="badges desk">
       <Badge
         :style="`margin-right: 12px; cursor: pointer; padding: ${
           (9 / 1920) * width
@@ -37,6 +37,7 @@
         :width="Math.min(Math.max((154 / 1920) * width, 104), 154)"
         :height="Math.min(Math.max((29 / 1920) * width, 20), 29)"
       />
+      <div class="descriptor">Дэйли-бистро</div>
     </div>
   </div>
 </template>
@@ -66,15 +67,21 @@ const { width } = useScreenWidth();
 .badges {
   display: flex;
 }
+.descriptor {
+  font-size: clamp(12px, 0.8vw, 16px);
+  text-align: center;
+  color: rgba($color: #000000, $alpha: 0.5);
+}
 
 .logo-wrapper {
   position: absolute;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 @media (max-width: 768px) {
-  *:not(.topbar-wrapper, .logo-wrapper, img) {
+  .desk {
     display: none;
   }
 }

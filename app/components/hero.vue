@@ -38,7 +38,12 @@
         width="614"
         height="614"
       />
-      <motion.div :style="{ translateY }">
+
+      <motion.div
+        class="ball-position"
+        :style="{ translateY }"
+        style="position: absolute; top: 500px"
+      >
         <div class="hero__ball-wrapper">
           <motion.img
             src="/images/hero-ball@2x.png"
@@ -94,7 +99,7 @@ const rotateZ = useTransform(
 .hero__image-wrapper {
   position: relative;
   width: clamp(340px, 34vw, 614px);
-  height: 600px;
+  height: clamp(340px, 34vw, 614px);
   margin: -5.2vw auto 0 auto;
   margin-top: clamp(-100px, -5.2vw, 53px);
   z-index: -1;
@@ -158,6 +163,10 @@ const rotateZ = useTransform(
     transform: translateX(-300%) !important;
     width: 10vw;
     height: auto;
+  }
+
+  .ball-position {
+    top: 400px !important;
   }
 }
 
