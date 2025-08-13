@@ -92,7 +92,7 @@ const rotateZ = useTransform(
   max-height: clamp(100px, 46.5vw, 700px);
   width: 100%;
   margin: 0 auto;
-  margin-top: 183px;
+  margin-top: clamp(80px, 13vw, 250px);
   margin-bottom: clamp(300px, 22vw, 400px);
 }
 

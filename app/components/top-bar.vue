@@ -51,12 +51,15 @@ const { width } = useScreenWidth();
 <style scoped lang="scss">
 .topbar-wrapper {
   padding: 20px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
+  z-index: 100;
   // margin: 20px;
 }
 
